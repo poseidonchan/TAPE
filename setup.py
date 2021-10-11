@@ -8,7 +8,6 @@ setup(
     url = 'https://github.com/poseidonchan/TAPE',
     license = 'GPL-3.0 License',
     packages = find_packages(),
-    included_package_data = True,
     platforms = 'any',
     install_requires = [
         'torch>=1.8.0',
@@ -18,6 +17,7 @@ setup(
         'anndata==0.7.6',
         'tqdm>=4.6',
         'scikit-learn>=0.23',
+        'seaborn>=0.11'
     ],
 
 )
