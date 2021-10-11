@@ -4,7 +4,6 @@ from tqdm import tqdm
 import torch
 from torch.optim import Adam
 from torch.utils.data import DataLoader
-from sklearn.preprocessing import MinMaxScaler
 from model import reproducibility, simdatset, AutoEncoder, device
 from utils import showloss
 import torch.nn.functional as F

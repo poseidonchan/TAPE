@@ -1,10 +1,9 @@
-import numba
 import anndata
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from numpy.random import choice
-import time
+
 def generate_simulated_data(sc_data, outname=None,
                             prop = None,
                             n=500, samplenum=4000):
