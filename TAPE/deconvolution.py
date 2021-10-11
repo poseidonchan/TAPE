@@ -4,19 +4,18 @@ from .train import train_model, predict
 
 
 
-def OverallDeconvolution(sc_reference, real_bulk,
-                         bulkDataType, genelenfile=None,
-                         sep = '\t',
+def OverallDeconvolution(sc_reference, real_bulk, sep='\t',
+                         datatype='counts', genelenfile=None,
                          mode='overall', adaptive=True,
                          save_model_name = None):
     """
     :param sc_reference: a txt expression file path index is cell type name, columns is gene name
     :param real_bulk: an expression file path, index is sample, columns is gene name
+    :param sep: used to read bulk data, depends on the format
     :param bulkDataType: FPKM or TPM, if type is RPKM, please just use FPKM
     :param genelenfile: specify the location of gene length file for transforming counts data to TPM or FPKM
                         this file should in txt format and
                             contain three columns: [Gene name,Transcript start (bp),Transcript end (bp)]
-    :param sep: used to read bulk data, depends on the format
     :param mode: 'high-resolution' means this will apply adaptive stage to every single sample to generate signature matrix,
                  'overall' means that it will deconvolve all the samples at the same time
     :param adaptive: it has to be True, if model is 'high-resolution'
@@ -37,7 +36,7 @@ def OverallDeconvolution(sc_reference, real_bulk,
     """
     simudata = generate_simulated_data(sc_data=sc_reference, samplenum=5000)
     train_x, train_y, test_x, genename, celltypes, samplename = \
-        ProcessInputData(simudata, real_bulk, sep=sep, datatype=bulkDataType,genelenfile=genelenfile)
+        ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype,genelenfile=genelenfile)
     print('training data shape is ',train_x.shape,'\ntest data shape is ',test_x.shape)
     if save_model_name is not None:
         model = train_model(train_x,train_y,save_model_name,batch_size=128,iteration=5000)
