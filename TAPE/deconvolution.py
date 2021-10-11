@@ -3,11 +3,10 @@ from .utils import ProcessInputData
 from .train import train_model, predict
 
 
-
-def OverallDeconvolution(sc_reference, real_bulk, sep='\t',
-                         datatype='counts', genelenfile=None,
-                         mode='overall', adaptive=True,
-                         save_model_name = None):
+def Deconvolution(sc_reference, real_bulk, sep='\t',
+                  datatype='counts', genelenfile=None,
+                  mode='overall', adaptive=True,
+                  save_model_name=None):
     """
     :param sc_reference: a txt expression file path index is cell type name, columns is gene name
     :param real_bulk: an expression file path, index is sample, columns is gene name
@@ -36,35 +35,38 @@ def OverallDeconvolution(sc_reference, real_bulk, sep='\t',
     """
     simudata = generate_simulated_data(sc_data=sc_reference, samplenum=5000)
     train_x, train_y, test_x, genename, celltypes, samplename = \
-        ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype,genelenfile=genelenfile)
-    print('training data shape is ',train_x.shape,'\ntest data shape is ',test_x.shape)
+        ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
+    print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
     if save_model_name is not None:
-        model = train_model(train_x,train_y,save_model_name,batch_size=128,iteration=5000)
+        model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
     else:
-        model = train_model(train_x,train_y,batch_size=128,iteration=5000)
+        model = train_model(train_x, train_y, batch_size=128, iteration=5000)
 
-    print('Notice that you are using parameters: mode='+str(mode)+' and adaptive='+str(adaptive))
+    print('Notice that you are using parameters: mode=' + str(mode) + ' and adaptive=' + str(adaptive))
     if adaptive is True:
         if mode == 'high-resolution':
 
             CellTypeSigm, Pred = \
-                predict(test_x=test_x,genename=genename,celltypes=celltypes,samplename=samplename,
+                predict(test_x=test_x, genename=genename, celltypes=celltypes, samplename=samplename,
                         model=model, model_name=save_model_name,
-                        adaptive=adaptive,mode=mode)
+                        adaptive=adaptive, mode=mode)
             return CellTypeSigm, Pred
         elif mode == 'overall':
             Sigm, Pred = \
                 predict(test_x=test_x, genename=genename, celltypes=celltypes, samplename=samplename,
                         model=model, model_name=save_model_name,
-                        adaptive=adaptive,mode=mode)
+                        adaptive=adaptive, mode=mode)
             return Sigm, Pred
     else:
         Pred = predict(test_x=test_x, genename=genename, celltypes=celltypes, samplename=samplename,
                        model=model, model_name=save_model_name,
-                       adaptive=adaptive,mode=mode)
+                       adaptive=adaptive, mode=mode)
         Sigm = None
         return Sigm, Pred
 
 
-
-
+SignatureMatrix, CellFractionPrediction = \
+    Deconvolution(sc_ref, bulkdata, sep='\t',
+                  datatype='TPM', genelenfile='./GeneLength.txt',
+                  mode='overall', adaptive=True,
+                  save_model_name=None)

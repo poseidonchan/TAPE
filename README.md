@@ -16,5 +16,22 @@ Needed Files:
 2. bulk data: tabular format, needed to specify the seperation ('\t',','or others), indices are sample names, columns are gene names
 3. gene length file: used to scale the expression value, columns should contain: [Gene name, Transcript start (bp), Transcript end (bp)]. This is provided in ./data/ directory.
 ```python
-
+# basic example
+from TAPE import Deconvolution
+SignatureMatrix, CellFractionPrediction = \
+    Deconvolution(sc_ref, bulkdata, sep='\t',
+                  datatype='TPM', genelenfile='./GeneLength.txt',
+                  mode='overall', adaptive=True,
+                  save_model_name=None)
 ```
+parameters:
+
+1. datatype: use '**TPM**', '**FPKM**' or '**counts**', this should be the same with your bulk datatype.
+2. mode: '**overall**' or '**high-resolution**'. If you need signature matrix for each sample, use 'high-resolution' mode.
+3. adaptive: **True** or **False**. If this is False, then it would not predict signature matrix, the return will be ***None***
+
+## Example
+The example is listed in the Test directory. Please run the example to get familiar with TAPE.
+
+## Acknowledgement
+Special thanks to *Mengyue Sun*, for his help to accelerate the sampling process (in the simulation.py)

@@ -31,8 +31,9 @@ def adaptive_stage(model, data, optimizerD, optimizerE, step=10, max_iter=5):
     loss = []
     model.eval()
     model.state = 'train'
-    ori_pred = model.encode(data).detach()
-    ori_sigm = model.sigmatrix().detach()
+    _, ori_pred, ori_sigm = model(data)
+    ori_sigm = ori_sigm.detach()
+    ori_pred = ori_pred.detach()
     for k in range(max_iter):
         model.eval()
         for i in range(step):
@@ -54,7 +55,7 @@ def adaptive_stage(model, data, optimizerD, optimizerE, step=10, max_iter=5):
     model.eval()
     model.state = 'test'
     _, pred, sigm = model(data)
-    return sigm.cpu().detach().numpy(), loss, ori_pred.cpu().detach().numpy()
+    return sigm.cpu().detach().numpy(), loss, ori_pred.cpu().numpy()
 
 def train_model(train_x, train_y,
                 model_name=None,

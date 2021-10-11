@@ -1,2 +1,2 @@
-from .deconvolution import OverallDeconvolution
+from .deconvolution import Deconvolution
 from .simulation import generate_simulated_data

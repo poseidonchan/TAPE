@@ -43,6 +43,7 @@ class AutoEncoder(nn.Module):
                                      nn.Linear(128, 64),
                                      nn.CELU(),
                                      nn.Linear(64, output_dim),
+                                     nn.Hardtanh(0,1),
                                      )
 
         self.decoder = nn.Sequential(nn.Linear(self.outputdim, 64, bias=False),
@@ -77,9 +78,8 @@ class AutoEncoder(nn.Module):
         sigmatrix = self.sigmatrix()
         z = self.encode(x)
         if self.state == 'train':
-            z = F.hardtanh(z,0,1)
+            pass
         elif self.state == 'test':
-            z = F.hardtanh(z,0,1)
             z = self.refraction(z)
         x_recon = torch.mm(z, sigmatrix)
         return x_recon, z, sigmatrix
