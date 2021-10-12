@@ -1,6 +1,8 @@
 # TAPE: Tissue-AdaPtive autoEncoder for accurate deconvolution and gene expression analysis
 
-**This model is able to deconvolve bulk RNA-seq data into cell fractions based on scRNA-seq data**
+**This model is able to accurately deconvolve bulk RNA-seq data into cell fractions based on scRNA-seq data**.
+
+More ***IMPORTANTLY***, TAPE enables quickly **cell-type-specific gene expression prediction**, users could take this advantage to analyze gene expression at cell-type level. 
 
 ## Setup
 TAPE uses PyTorch as its backbones, so the suitable version of PyTorch will accelerate the model. We recommend users to install PyTorch(>=1.8.0) with ***right*** compute platform (CUDA, CPU or ROCm) from its official [website](https://pytorch.org) in advance.
