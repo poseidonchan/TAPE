@@ -30,12 +30,13 @@ def adaptive_stage(model, data, optimizerD, optimizerE, step=10, max_iter=5):
     data = torch.from_numpy(data).float().to(device)
     loss = []
     model.eval()
-    model.state = 'train'
+    model.state = 'test'
     _, ori_pred, ori_sigm = model(data)
     ori_sigm = ori_sigm.detach()
     ori_pred = ori_pred.detach()
+    model.state = 'train'
     for k in range(max_iter):
-        model.eval()
+        model.train()
         for i in range(step):
             optimizerD.zero_grad()
             x_recon, _, sigm = model(data)
