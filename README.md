@@ -7,7 +7,7 @@ More ***IMPORTANTLY***, TAPE enables quickly **cell-type-specific gene expressio
 ## Setup
 TAPE uses PyTorch as its backbones, so the suitable version of PyTorch will accelerate the model. We recommend users to install PyTorch(>=1.8.0) with ***right*** compute platform (CUDA, CPU or ROCm) from its official [website](https://pytorch.org) in advance.
 
-For example, we used the latest released Nvidia GPU 3090, so we choose the CUDA version 11.1 and the command is:
+For example, we used the latest released Nvidia GPU RTX3090, so we choose the CUDA version 11.1 and the command is:
 
 ```bash
 pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
