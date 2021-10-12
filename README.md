@@ -2,10 +2,16 @@
 
 **This model is able to deconvolve bulk RNA-seq data into cell fractions based on scRNA-seq data**
 
-## Installation
+## Setup
 TAPE uses PyTorch as its backbones, so the suitable version of PyTorch will accelerate the model. We recommend users to install PyTorch(>=1.8.0) with ***right*** compute platform (CUDA, CPU or ROCm) from its official [website](https://pytorch.org) in advance.
 
-Then the TAPE could be installed from PyPI directly:
+For example, we used the latest released Nvidia GPU 3090, so we choose the CUDA version 11.1 and the command is:
+
+```bash
+pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+If PyTorch is successfully installed, then the TAPE could be installed from PyPI directly:
 
 ```bash
 pip install scTAPE
