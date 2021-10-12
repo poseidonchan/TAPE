@@ -103,7 +103,6 @@ def predict(test_x, genename, celltypes, samplename,
                 optimizerD = torch.optim.Adam(decoder_parameters, lr=1e-4)
                 optimizerE = torch.optim.Adam(encoder_parameters, lr=1e-4)
                 test_sigm, loss, test_pred = adaptive_stage(model, x, optimizerD, optimizerE, step=500, max_iter=3)
-                #showloss(loss)
                 TestSigmList[i, :, :] = test_sigm
                 TestPred[i,:] = test_pred
             TestPred = pd.DataFrame(TestPred,columns=celltypes,index=samplename)

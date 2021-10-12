@@ -64,9 +64,3 @@ def Deconvolution(sc_reference, real_bulk, sep='\t',
         Sigm = None
         return Sigm, Pred
 
-
-SignatureMatrix, CellFractionPrediction = \
-    Deconvolution(sc_ref, bulkdata, sep='\t',
-                  datatype='TPM', genelenfile='./GeneLength.txt',
-                  mode='overall', adaptive=True,
-                  save_model_name=None)
