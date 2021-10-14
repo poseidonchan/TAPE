@@ -62,6 +62,7 @@ parameters:
 Then, users could use the following to make predictions:
 
 ```python
+# simulated data -> results
 SignatureMatrix, CellFractionPrediction = \
     Deconvolution(simulated_data, bulkdata, sep='\t',
                   datatype='TPM', genelenfile='./GeneLength.txt',
