@@ -38,6 +38,16 @@ parameters:
 2. mode: '**overall**' or '**high-resolution**'. If you need signature matrix for each sample, use 'high-resolution' mode.
 3. adaptive: **True** or **False**. If this is False, then it would not predict signature matrix, the return will be ***None***
 
+Since the original implementation of Scaden [[repository](https://github.com/KevinMenden/scaden)] [[paper](https://www.science.org/doi/10.1126/sciadv.aba2619)] is not easy for us to test, we implemented the PyTorch version of Scaden. If you want to use Scaden to deconvolve bulk RNA-seq data, you can use the following code:
+
+```python
+from TAPE.deconvolution import ScadenDeconvolution
+Pred = ScadenDeconvolution(sc_ref, bulkdata, sep='\t')
+```
+
+The parameters in this function are the same as the parameters in the TAPE.Deconvolution function. 
+
+
 ## Example
 The example is listed in the Test directory. Please run the example to get familiar with TAPE.
 

@@ -6,7 +6,7 @@ from torch.optim import Adam
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 
-from .model import reproducibility, simdatset, AutoEncoder, device
+from .model import simdatset, AutoEncoder, device
 from .utils import showloss
 
 def training_stage(model, train_loader, optimizer, epochs=10):
@@ -63,7 +63,7 @@ def train_model(train_x, train_y,
                 batch_size=128, iteration=10000):
 
     
-    reproducibility(9)
+    #reproducibility(9)
     
     train_loader = DataLoader(simdatset(train_x, train_y), batch_size=batch_size, shuffle=True)
     model = AutoEncoder(train_x.shape[1], train_y.shape[1]).to(device)
@@ -83,7 +83,7 @@ def train_model(train_x, train_y,
 def predict(test_x, genename, celltypes, samplename,
             model_name=None, model=None,
             adaptive=True, mode='overall'):
-    reproducibility(9)
+    #reproducibility(9)
     
     if model is not None and model_name is None:
         print('Model is saved without defined name')

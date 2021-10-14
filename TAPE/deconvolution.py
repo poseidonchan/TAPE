@@ -1,7 +1,8 @@
+import pandas as pd
 from .simulation import generate_simulated_data
 from .utils import ProcessInputData
 from .train import train_model, predict
-
+from .model import scaden
 
 def Deconvolution(sc_reference, real_bulk, sep='\t',
                   datatype='counts', genelenfile=None,
@@ -63,4 +64,23 @@ def Deconvolution(sc_reference, real_bulk, sep='\t',
                        adaptive=adaptive, mode=mode)
         Sigm = None
         return Sigm, Pred
+
+def ScadenDeconvolution(sc_reference, real_bulk, sep='\t'):
+    simudata = generate_simulated_data(sc_data=sc_reference, samplenum=5000)
+    train_x, train_y, test_x, genename, celltypes, samplename = \
+        ProcessInputData(simudata, real_bulk, sep=sep, datatype='counts', genelenfile=None)
+    print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
+    pred = test_scaden(train_x,train_y,test_x,batch_size=128)
+    pred = pd.DataFrame(pred, columns=celltypes, index=samplename)
+    return pred
+
+def test_scaden(train_x,train_y,test_x,batch_size=128):
+    architectures = {'m256': ([256,128,64,32],[0,0,0,0]),
+                     'm512': ([512,256,128,64],[0, 0.3, 0.2, 0.1]),
+                     'm1024': ([1024, 512, 256, 128],[0, 0.6, 0.3, 0.1])}
+    model = scaden(architectures, train_x, train_y, epochs=int(5000/(len(train_x)/batch_size)))
+    model.train()
+    pred = model.predict(test_x)
+    return pred
+
 
