@@ -6,12 +6,17 @@ from numpy.random import choice
 
 def generate_simulated_data(sc_data, outname=None,
                             prop = None,
-                            n=500, samplenum=4000):
+                            n=500, samplenum=5000):
     # sc_data should be a cell*gene matrix, no null value, txt file, sep='\t'
     # index should be cell names
     # columns should be gene labels
     print('Reading single-cell dataset, this may take 1 min')
-    sc_data = pd.read_csv(sc_data,index_col=0,sep='\t')
+    if type(sc_data) is str:
+        sc_data = pd.read_csv(sc_data,index_col=0,sep='\t')
+    elif type(sc_data) is pd.DataFrame:
+        pass
+    else:
+        raise Exception("Please check the format of single-cell data!")
     print('Reading dataset is done')
     sc_data.dropna(inplace=True)
     sc_data['celltype'] = sc_data.index

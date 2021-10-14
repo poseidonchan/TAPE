@@ -1,15 +1,18 @@
+import anndata
 import pandas as pd
 from .simulation import generate_simulated_data
 from .utils import ProcessInputData
 from .train import train_model, predict
 from .model import scaden
 
-def Deconvolution(sc_reference, real_bulk, sep='\t',
+def Deconvolution(necessary_data, real_bulk, sep='\t',
                   datatype='counts', genelenfile=None,
                   mode='overall', adaptive=True,
                   save_model_name=None):
     """
-    :param sc_reference: a txt expression file path index is cell type name, columns is gene name
+    :param necessary_data: for single-cell data, txt file and dataframe are supported. for simulated data, file location
+                           and the h5ad variable are supported. for a trained model, model location(saved with pth) and
+                           the model are supported.
     :param real_bulk: an expression file path, index is sample, columns is gene name
     :param sep: used to read bulk data, depends on the format
     :param bulkDataType: FPKM or TPM, if type is RPKM, please just use FPKM
@@ -34,14 +37,49 @@ def Deconvolution(sc_reference, real_bulk, sep='\t',
                 this will return a cell fraction directly
                 the signature matrix in this mode is None
     """
-    simudata = generate_simulated_data(sc_data=sc_reference, samplenum=5000)
-    train_x, train_y, test_x, genename, celltypes, samplename = \
-        ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
-    print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
-    if save_model_name is not None:
-        model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
+    if type(necessary_data) is str:
+        postfix = necessary_data.split('.')[-1]
+        if postfix == 'txt':
+            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000)
+            train_x, train_y, test_x, genename, celltypes, samplename = \
+                ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
+            print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
+            if save_model_name is not None:
+                model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
+            else:
+                model = train_model(train_x, train_y, batch_size=128, iteration=5000)
+        elif postfix == 'h5ad':
+            simudata = anndata.read_h5ad(necessary_data)
+            train_x, train_y, test_x, genename, celltypes, samplename = \
+                ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
+            print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
+            if save_model_name is not None:
+                model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
+            else:
+                model = train_model(train_x, train_y, batch_size=128, iteration=5000)
+        elif postfix == 'pth':
+            model = torch.load(necessary_data)
     else:
-        model = train_model(train_x, train_y, batch_size=128, iteration=5000)
+        if type(necessary_data) is pd.DataFrame:
+            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000)
+            train_x, train_y, test_x, genename, celltypes, samplename = \
+                ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
+            print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
+            if save_model_name is not None:
+                model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
+            else:
+                model = train_model(train_x, train_y, batch_size=128, iteration=5000)
+        elif type(necessary_data) is anndata.AnnData:
+            train_x, train_y, test_x, genename, celltypes, samplename = \
+                ProcessInputData(necessary_data, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
+            print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
+            if save_model_name is not None:
+                model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
+            else:
+                model = train_model(train_x, train_y, batch_size=128, iteration=5000)
+        elif type(necessary_data) is TAPE.model.AutoEncoder:
+            model = necessary_data
+
 
     print('Notice that you are using parameters: mode=' + str(mode) + ' and adaptive=' + str(adaptive))
     if adaptive is True:
