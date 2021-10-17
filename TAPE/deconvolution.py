@@ -8,7 +8,8 @@ from .model import scaden
 def Deconvolution(necessary_data, real_bulk, sep='\t',
                   datatype='counts', genelenfile=None,
                   mode='overall', adaptive=True,
-                  save_model_name=None):
+                  save_model_name=None,
+                  batch_size=128, epochs=128):
     """
     :param necessary_data: for single-cell data, txt file and dataframe are supported. for simulated data, file location
                            and the h5ad variable are supported. for a trained model, model location(saved with pth) and
@@ -41,55 +42,42 @@ def Deconvolution(necessary_data, real_bulk, sep='\t',
         postfix = necessary_data.split('.')[-1]
         if postfix == 'txt':
             simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000)
-            train_x, train_y, test_x, genename, celltypes, samplename = \
-                ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
-            print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
-            if save_model_name is not None:
-                model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
-            else:
-                model = train_model(train_x, train_y, batch_size=128, iteration=5000)
+
         elif postfix == 'h5ad':
             simudata = anndata.read_h5ad(necessary_data)
-            train_x, train_y, test_x, genename, celltypes, samplename = \
-                ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
-            print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
-            if save_model_name is not None:
-                model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
-            else:
-                model = train_model(train_x, train_y, batch_size=128, iteration=5000)
+
         elif postfix == 'pth':
-            model = torch.load(necessary_data)
+            raise Exception('Do not accept a model as input')
+        else:
+            raise Exception('Please give the correct input')
     else:
         if type(necessary_data) is pd.DataFrame:
             simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000)
-            train_x, train_y, test_x, genename, celltypes, samplename = \
-                ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
-            print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
-            if save_model_name is not None:
-                model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
-            else:
-                model = train_model(train_x, train_y, batch_size=128, iteration=5000)
+
         elif type(necessary_data) is anndata.AnnData:
-            train_x, train_y, test_x, genename, celltypes, samplename = \
-                ProcessInputData(necessary_data, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
-            print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
-            if save_model_name is not None:
-                model = train_model(train_x, train_y, save_model_name, batch_size=128, iteration=5000)
-            else:
-                model = train_model(train_x, train_y, batch_size=128, iteration=5000)
+            simudata = necessary_data
+
         elif type(necessary_data) is TAPE.model.AutoEncoder:
-            model = necessary_data
+            raise Exception('Do not accept a model as input')
+        else:
+            raise Exception('Please give the correct input')
 
-
+    train_x, train_y, test_x, genename, celltypes, samplename = \
+        ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
+    print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
+    if save_model_name is not None:
+        model = train_model(train_x, train_y, save_model_name, batch_size=batch_size, epochs=epochs)
+    else:
+        model = train_model(train_x, train_y, batch_size=batch_size, epochs=epochs)
     print('Notice that you are using parameters: mode=' + str(mode) + ' and adaptive=' + str(adaptive))
     if adaptive is True:
         if mode == 'high-resolution':
-
             CellTypeSigm, Pred = \
                 predict(test_x=test_x, genename=genename, celltypes=celltypes, samplename=samplename,
                         model=model, model_name=save_model_name,
                         adaptive=adaptive, mode=mode)
             return CellTypeSigm, Pred
+
         elif mode == 'overall':
             Sigm, Pred = \
                 predict(test_x=test_x, genename=genename, celltypes=celltypes, samplename=samplename,
@@ -103,20 +91,44 @@ def Deconvolution(necessary_data, real_bulk, sep='\t',
         Sigm = None
         return Sigm, Pred
 
-def ScadenDeconvolution(sc_reference, real_bulk, sep='\t'):
-    simudata = generate_simulated_data(sc_data=sc_reference, samplenum=5000)
+def ScadenDeconvolution(necessary_data, real_bulk, sep='\t',
+                        batch_size=128, epochs=128):
+    if type(necessary_data) is str:
+        postfix = necessary_data.split('.')[-1]
+        if postfix == 'txt':
+            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000)
+
+        elif postfix == 'h5ad':
+            simudata = anndata.read_h5ad(necessary_data)
+
+        elif postfix == 'pth':
+            raise Exception('Do not accept a model as input')
+        else:
+            raise Exception('Please give the correct input')
+    else:
+        if type(necessary_data) is pd.DataFrame:
+            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000)
+
+        elif type(necessary_data) is anndata.AnnData:
+            simudata = necessary_data
+
+        elif type(necessary_data) is TAPE.model.AutoEncoder:
+            raise Exception('Do not accept a model as input')
+        else:
+            raise Exception('Please give the correct input')
+
     train_x, train_y, test_x, genename, celltypes, samplename = \
-        ProcessInputData(simudata, real_bulk, sep=sep, datatype='counts', genelenfile=None)
+        ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
     print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
-    pred = test_scaden(train_x,train_y,test_x,batch_size=128)
+    pred = test_scaden(train_x,train_y,test_x,batch_size=batch_size,epochs=epochs)
     pred = pd.DataFrame(pred, columns=celltypes, index=samplename)
     return pred
 
-def test_scaden(train_x,train_y,test_x,batch_size=128):
+def test_scaden(train_x,train_y,test_x,batch_size=128,epochs=128):
     architectures = {'m256': ([256,128,64,32],[0,0,0,0]),
                      'm512': ([512,256,128,64],[0, 0.3, 0.2, 0.1]),
                      'm1024': ([1024, 512, 256, 128],[0, 0.6, 0.3, 0.1])}
-    model = scaden(architectures, train_x, train_y, epochs=int(5000/(len(train_x)/batch_size)))
+    model = scaden(architectures, train_x, train_y, batch_size=batch_size, epochs=epochs)
     model.train()
     pred = model.predict(test_x)
     return pred

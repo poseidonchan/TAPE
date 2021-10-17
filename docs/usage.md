@@ -12,7 +12,7 @@
 ### Procedures
 Understanding the whole procedure for deconvolution is very useful for you to master the flexible usage of TAPE. Here is the diagram:
 
-<img src="img/procedure.png" alt="procedure" style="zoom:48%;" />
+![](/Users/chan/Documents/GitHub/TAPE/docs/img/procedure.png)
 
 Obviously, given bulk data with single-cell data or simulated data or a trained model could produce the expected results. So, there will be three different ways to use TAPE. Since it is hard to guarantee that the intersected genes are the same when users try to use a trained model as start point, we only introduce two of them, start from single-cell data or simulated data.
 
@@ -54,10 +54,10 @@ simulated_data = generate_simulated_data(sc_ref,
 
 parameters:
 
-1. outname: a *String* to specify the name to save the simulated data. The saved file is a **.h5ad** file. This kind files could be read through the package [AnnData](https://anndata.readthedocs.io/en/latest/).
-2. prop: ndarray shapes like [sample_number, celltype_number]. If this is None, the function will randomly create an array to sample the data.
-3. n: integer number. Specifying how many cells will be sampled for each pseudo-bulk data.
-4. samplenum: integer number. Specifying how many pseudo-bulk data will be created after sampling.
+1. outname: a ***String*** to specify the name to save the simulated data. The saved file is a **.h5ad** file. This kind files could be read through the package [AnnData](https://anndata.readthedocs.io/en/latest/).
+2. prop: **ndarray** shapes like [sample_number, celltype_number]. If this is None, the function will randomly create an array to sample the data.
+3. n: **int**eger number. Specifying how many cells will be sampled for each pseudo-bulk data.
+4. samplenum: **int**eger number. Specifying how many pseudo-bulk data will be created after sampling.
 
 Then, users could use the following to make predictions:
 

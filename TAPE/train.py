@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader
 from .model import simdatset, AutoEncoder, device
 from .utils import showloss
 
-def training_stage(model, train_loader, optimizer, epochs=10):
+def training_stage(model, train_loader, optimizer, epochs=128):
     model.train()
     model.state = 'train'
     loss = []
@@ -60,16 +60,13 @@ def adaptive_stage(model, data, optimizerD, optimizerE, step=10, max_iter=5):
 
 def train_model(train_x, train_y,
                 model_name=None,
-                batch_size=128, iteration=10000):
-
-    
-    #reproducibility(9)
+                batch_size=128, epochs=128):
     
     train_loader = DataLoader(simdatset(train_x, train_y), batch_size=batch_size, shuffle=True)
     model = AutoEncoder(train_x.shape[1], train_y.shape[1]).to(device)
     optimizer = Adam(model.parameters(), lr=1e-4)
     print('Start training')
-    model, loss, reconloss = training_stage(model, train_loader, optimizer, epochs=int(iteration /(len(train_x)/128)))
+    model, loss, reconloss = training_stage(model, train_loader, optimizer, epochs=epochs)
     print('Training is done')
     print('prediction loss is:')
     showloss(loss)
@@ -83,7 +80,6 @@ def train_model(train_x, train_y,
 def predict(test_x, genename, celltypes, samplename,
             model_name=None, model=None,
             adaptive=True, mode='overall'):
-    #reproducibility(9)
     
     if model is not None and model_name is None:
         print('Model is saved without defined name')
