@@ -1,4 +1,7 @@
 site_name: scTAPE
+repo_url: https://github.com/poseidonchan/TAPE
+site_author: 'Yanshuo CHEN'
+docs_dir: 'docs'
 nav:
   - Home: index.md
   - Installation: installation.md
