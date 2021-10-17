@@ -1,1 +1,8 @@
-site_name: My Docs
+site_name: scTAPE
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - Datasets: datasets.md
+  - Experiments: experiments.md
+theme: readthedocs
