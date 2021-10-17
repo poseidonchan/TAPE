@@ -2,7 +2,7 @@
 ### Requied Files
 1. single-cell RNA-seq data (cell types should be labeled): tabular data, seperated by TAB. The indices are cell types, the columns are gene names. It should be stored in txt format.
 
-2. bulk RNA-seq data: tabular data, seperated by defined symbols. The indices are smaple name, the columns are gene names.
+2. bulk RNA-seq data: tabular data, seperated by defined symbols. The indices are sample name, the columns are gene names.
 
 3. gene length file: *If you want to normalize simulated data into TPM/FPKM format, you should specify the location of this file.* Tabular data, seperated by TAB, columns should contain: 
 
