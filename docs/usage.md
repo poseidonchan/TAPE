@@ -12,7 +12,7 @@
 ### Procedures
 Understanding the whole procedure for deconvolution is very useful for you to master the flexible usage of TAPE. Here is the diagram:
 
-![](/Users/chan/Documents/GitHub/TAPE/docs/img/procedure.png)
+![](./img/procedure.png)
 
 Obviously, given bulk data with single-cell data or simulated data or a trained model could produce the expected results. So, there will be three different ways to use TAPE. Since it is hard to guarantee that the intersected genes are the same when users try to use a trained model as start point, we only introduce two of them, start from single-cell data or simulated data.
 
