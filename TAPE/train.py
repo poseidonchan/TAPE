@@ -56,7 +56,7 @@ def adaptive_stage(model, data, optimizerD, optimizerE, step=10, max_iter=5):
     model.eval()
     model.state = 'test'
     _, pred, sigm = model(data)
-    return sigm.cpu().detach().numpy(), loss, ori_pred.cpu().numpy()
+    return sigm.cpu().detach().numpy(), loss, pred.detach().cpu().numpy()
 
 def train_model(train_x, train_y,
                 model_name=None,
