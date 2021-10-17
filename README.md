@@ -1,6 +1,6 @@
 # TAPE: Tissue-AdaPtive autoEncoder for accurate deconvolution and gene expression analysis
 
-![scTAPE](https://img.shields.io/badge/scTAPE-v0.2.2-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![Downloads](https://static.pepy.tech/personalized-badge/sctape?period=total&units=international_system&left_color=blue&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/sctape)
+![scTAPE](https://img.shields.io/badge/scTAPE-v0.2.2-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![Downloads](https://static.pepy.tech/personalized-badge/sctape?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/sctape)
 
 **This model is able to accurately deconvolve bulk RNA-seq data into cell fractions based on scRNA-seq data**.
 
