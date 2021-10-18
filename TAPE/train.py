@@ -56,7 +56,7 @@ def adaptive_stage(model, data, optimizerD, optimizerE, step=10, max_iter=5):
     model.eval()
     model.state = 'test'
     _, pred, sigm = model(data)
-    return sigm.cpu().detach().numpy(), loss, pred.detach().cpu().numpy()
+    return sigm.cpu().detach().numpy(), loss, ori_pred.detach().cpu().numpy()
 
 def train_model(train_x, train_y,
                 model_name=None,
@@ -99,7 +99,7 @@ def predict(test_x, genename, celltypes, samplename,
                 encoder_parameters = [{'params': [p for n, p in model.named_parameters() if 'encoder' in n]}]
                 optimizerD = torch.optim.Adam(decoder_parameters, lr=1e-4)
                 optimizerE = torch.optim.Adam(encoder_parameters, lr=1e-4)
-                test_sigm, loss, test_pred = adaptive_stage(model, x, optimizerD, optimizerE, step=500, max_iter=3)
+                test_sigm, loss, test_pred = adaptive_stage(model, x, optimizerD, optimizerE, step=300, max_iter=3)
                 TestSigmList[i, :, :] = test_sigm
                 TestPred[i,:] = test_pred
             TestPred = pd.DataFrame(TestPred,columns=celltypes,index=samplename)
@@ -123,7 +123,7 @@ def predict(test_x, genename, celltypes, samplename,
             optimizerD = torch.optim.Adam(decoder_parameters, lr=1e-4)
             optimizerE = torch.optim.Adam(encoder_parameters, lr=1e-4)
             print('Start adaptive training for all the samples')
-            test_sigm, loss, test_pred = adaptive_stage(model, test_x, optimizerD, optimizerE, step=500, max_iter=3)
+            test_sigm, loss, test_pred = adaptive_stage(model, test_x, optimizerD, optimizerE, step=300, max_iter=3)
             print('Adaptive stage is done')
             test_sigm = pd.DataFrame(test_sigm,columns=genename,index=celltypes)
             test_pred = pd.DataFrame(test_pred,columns=celltypes,index=samplename)
