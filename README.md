@@ -1,8 +1,10 @@
 # TAPE: Tissue-AdaPtive autoEncoder for accurate deconvolution and gene expression analysis
 
-![scTAPE](https://img.shields.io/badge/scTAPE-v0.2.3-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![Downloads](https://static.pepy.tech/personalized-badge/sctape?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/sctape)
+![scTAPE](https://img.shields.io/badge/scTAPE-v0.2.4-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![Downloads](https://static.pepy.tech/personalized-badge/sctape?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/sctape)
 
 **This model is able to accurately deconvolve bulk RNA-seq data into cell fractions and predict cell-type-specific gene expression at cell-type level based on scRNA-seq data**.
+
+related article ***Deep autoencoder for interpretable tissue-adaptive deconvolution and cell-type-specific gene analysis*** is available on [*bioRxiv*](https://doi.org/10.1101/2021.10.26.465846)
 
 ## Setup
 TAPE uses PyTorch as its Deep-learning framework, so the suitable version of PyTorch will accelerate the model training process. We recommend users to install PyTorch(>=1.8.0) with ***right*** compute platform (CUDA, CPU or ROCm) from its official [website](https://pytorch.org) in advance.
@@ -57,6 +59,11 @@ An example is placed in the **Test** directory. Please run the example to get fa
 
 ## Issues
 If you find any bugs or have problems when you are using scTAPE, feel free to raise issues.
+
+## Citation
+If you feel TAPE is useful and want to cite TAPE, please use the following format:
+[Bib TeX](https://cloud.tsinghua.edu.cn/f/6351d49841934fa79bc5/?dl=1)
+[EndNote](https://cloud.tsinghua.edu.cn/f/88780d85281c40c0848f/?dl=1)
 
 ## Acknowledgement
 Special thanks to [*Mengyue Sun*](https://github.com/sunmy2019), for his help to accelerate the sampling process (in the simulation.py).

@@ -73,7 +73,7 @@ class AutoEncoder(nn.Module):
         w02 = (torch.mm(w01, w2))
         w03 = (torch.mm(w02, w3))
         w04 = (torch.mm(w03, w4))
-        return F.hardtanh(w04,0,1)
+        return F.relu(w04)
 
     def forward(self, x):
         sigmatrix = self.sigmatrix()

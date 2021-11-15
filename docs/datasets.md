@@ -1,5 +1,13 @@
 ## Datasets
-### Training datasets
+
+### Pseudo-bulk datasets
+> 1. reference [source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE109774) [ZIP](https://cloud.tsinghua.edu.cn/f/8b573f044bcc4bdf9fdc/)
+> 2. test datasets (with/without noise) [ZIP](https://cloud.tsinghua.edu.cn/f/4112f905eebc4687a618/)
+> 3. groundtruth [ZIP](https://cloud.tsinghua.edu.cn/f/70023f6790804ba0850b/)
+> 4. program [ipynb](https://github.com/poseidonchan/TAPE/blob/main/Experiments/pseudobulk_test.ipynb)
+
+### Training datasets (real)
+
 > #### PBMC datasets
 > 1. data6k from healthy donor [source](https://www.10xgenomics.com/resources/datasets/6-k-pbm-cs-from-a-healthy-donor-1-standard-1-1-0) [process](https://github.com/poseidonchan/TAPE/blob/main/Experiments/PBMC_preprocess.ipynb) [TXT](https://cloud.tsinghua.edu.cn/f/9d1ef3e622cf4cfa9e7d/) [H5AD](https://cloud.tsinghua.edu.cn/f/c976ff98e8974eb5a076/)
 > 2. data8k from healthy donor [source](https://www.10xgenomics.com/resources/datasets/8-k-pbm-cs-from-a-healthy-donor-2-standard-2-1-0) [process](https://github.com/poseidonchan/TAPE/blob/main/Experiments/PBMC_preprocess.ipynb) [TXT](https://cloud.tsinghua.edu.cn/f/fb340c4876d1480686ac/) [H5AD](https://cloud.tsinghua.edu.cn/f/e95354954c0d49ed9aeb/)
