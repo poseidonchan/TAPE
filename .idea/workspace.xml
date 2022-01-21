@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2350c592-b677-41d4-a485-f93ce389bdb9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/GEPanalysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/GEPanalysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/HIV_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/HIV_analysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/ROSMAP_GEPanalysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/ROSMAP_GEPanalysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/ROSMAPclinical_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/ROSMAPclinical_analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/heat_map/ccc_pseudo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/heat_map/ccc_pseudo.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/heat_map/ccc_real.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/heat_map/ccc_real.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/heat_map/heat map.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/heat_map/heat map.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/heat_map/mea_pseudo.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/heat_map/mea_real.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/scaden&amp;TAPE.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/scaden&amp;TAPE.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/time_comparison.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/time_comparison.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Figures&amp;Tables.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TAPE/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TAPE/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/datasets.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/datasets.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TAPE/deconvolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/deconvolution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TAPE/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/simulation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/experiments.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/experiments.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +43,8 @@
       <option name="presentableId" value="Default" />
       <updated>1634625865911</updated>
       <workItem from="1634625867377" duration="816000" />
-      <workItem from="1636973684779" duration="146000" />
+      <workItem from="1636973684779" duration="744000" />
+      <workItem from="1642386534832" duration="4317000" />
     </task>
     <servers />
   </component>
