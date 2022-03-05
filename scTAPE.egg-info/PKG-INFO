@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: scTAPE
-Version: 0.2.5
+Version: 0.2.6
 Summary: deep learning tools for bulk RNA-seq deconvolution and gene expression analysis
 Home-page: https://github.com/poseidonchan/TAPE
 Author: Yanshuo CHEN

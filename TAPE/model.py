@@ -44,7 +44,7 @@ class AutoEncoder(nn.Module):
                                      nn.Linear(128, 64),
                                      nn.CELU(),
                                      nn.Linear(64, output_dim),
-                                     nn.Hardtanh(0,1),
+                                     nn.ReLU(),
                                      )
 
         self.decoder = nn.Sequential(nn.Linear(self.outputdim, 64, bias=False),
