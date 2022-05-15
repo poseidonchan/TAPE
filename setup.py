@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
     name = 'scTAPE',
-    version = '0.2.6',
+    version = '1.0.0',
     description = 'deep learning tools for bulk RNA-seq deconvolution and gene expression analysis',
     author = 'Yanshuo CHEN',
     author_email = 'poseidonchan@icloud.com',

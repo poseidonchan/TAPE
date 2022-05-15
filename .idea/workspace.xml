@@ -2,17 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2350c592-b677-41d4-a485-f93ce389bdb9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/GEPanalysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/GEPanalysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/GEPanalysis-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/ROSMAP_deconvolution-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/covid_pbmc_plot-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/covid_pbmc_plot-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/lineplot-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/time_comparison-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/time_comparison-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/COVID_iset_deconvolution.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/COVID_pbmc_deconvolution.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/GEPanalysis.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/HIV_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/HIV_analysis.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/ROSMAP_GEPanalysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/ROSMAP_GEPanalysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/ROSMAP_deconvolution.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/ROSMAPclinical_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/ROSMAPclinical_analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/ROSMAPpred_dwlsmouse.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/ROSMAPpred_scaden.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/ROSMAPpred_scadenall.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/barplot.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/covid_pbmc_plot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/covid_pbmc_plot.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Experiments/Figures/heat_map/heat map.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/heat_map/heat map.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/scaden&amp;TAPE.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/scaden&amp;TAPE.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/lineplot.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/pbmc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/Figures/time_comparison.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/time_comparison.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TAPE/deconvolution.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/deconvolution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TAPE/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TAPE/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/simulation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/experiments.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/experiments.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TAPE/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TAPE/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/TAPE/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/TAPE/deconvolution.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/TAPE/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/TAPE/simulation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/TAPE/train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/TAPE/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/scTAPE-0.2.6-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/scTAPE-0.2.6.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/datasets.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/datasets.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scTAPE.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scTAPE.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scTAPE.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scTAPE.egg-info/requires.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scTAPE.egg-info/top_level.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +53,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1ziLGNtnawtbWj3eM6QvPYGNM8F" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,6 +67,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -45,6 +80,9 @@
       <workItem from="1634625867377" duration="816000" />
       <workItem from="1636973684779" duration="744000" />
       <workItem from="1642386534832" duration="4317000" />
+      <workItem from="1650931404774" duration="3582000" />
+      <workItem from="1651766533141" duration="2218000" />
+      <workItem from="1652616185031" duration="369000" />
     </task>
     <servers />
   </component>

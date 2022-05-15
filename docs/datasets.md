@@ -1,11 +1,8 @@
 ## Datasets
 
 ### Pseudo-bulk datasets
-> 1. reference [source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE109774) [ZIP](https://cloud.tsinghua.edu.cn/f/8b573f044bcc4bdf9fdc/)
-> 2. test datasets (with/without noise) [ZIP](https://cloud.tsinghua.edu.cn/f/4112f905eebc4687a618/)
-> 3. groundtruth [ZIP](https://cloud.tsinghua.edu.cn/f/70023f6790804ba0850b/)
-> 4. program [ipynb](https://github.com/poseidonchan/TAPE/blob/main/Experiments/pseudobulk_test.ipynb)
-
+1. source data [source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE109774) 
+2. processed data [ZIP](https://drive.google.com/file/d/1TrmorRPdbc8odxGtOZ5dT2Jad3PJ7ASx/view?usp=sharing) (including all the benchmarking files)
 ### Training datasets (real)
 
 > #### PBMC datasets
@@ -20,7 +17,7 @@
 > 1. Chen's dataset [source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE87544) [process](https://github.com/poseidonchan/TAPE/blob/main/Experiments/GSE87544_mousebrain_chen.ipynb) [TXT](https://cloud.tsinghua.edu.cn/f/9524426cd0194498adbb/) [H5AD](https://cloud.tsinghua.edu.cn/f/45108af1e6394077b9e1/)
 > #### Pancreas/islet dataset
 > 1. Baron's pancreas dataset [source](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE84133) [TXT](https://cloud.tsinghua.edu.cn/f/f46d231b106745f7a9a8/) [H5AD](https://cloud.tsinghua.edu.cn/f/f236672223d4453e9aa4/)
-> 2. Baron's islet dataset (select islet cells from pancreas dataset) [TXT](https://cloud.tsinghua.edu.cn/f/7be19fe473214de085f3/) [H5AD](https://cloud.tsinghua.edu.cn/f/437a11d2b94747b0a54f/)
+> 2. Baron's islet dataset (selecting islet cells from pancreas dataset) [TXT](https://cloud.tsinghua.edu.cn/f/7be19fe473214de085f3/) [H5AD](https://cloud.tsinghua.edu.cn/f/437a11d2b94747b0a54f/)
 ### Bulk RNA-seq dataset
 > #### PBMC datasets
 > 1. PBMC datasets from healthy donor

@@ -21,10 +21,14 @@ If PyTorch is successfully installed, then TAPE could be installed from PyPI dir
 pip install scTAPE
 ```
 ## Usage
+
 Required Files:
 1. single-cell reference: txt format, indices are cell types, columns are gene names
 2. bulk data: tabular format, needed to specify the seperation ('\t',','or others), indices are sample names, columns are gene names
 3. gene length file: used to scale the expression value, columns should contain: [Gene name, Transcript start (bp), Transcript end (bp)]. This is provided in ./data/ directory.
+
+***Warning: single-cell reference and bulk samples should contain the same cell types***
+
 ```python
 # basic example
 from TAPE import Deconvolution

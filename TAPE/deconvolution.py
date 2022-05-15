@@ -3,20 +3,21 @@ import pandas as pd
 from .simulation import generate_simulated_data
 from .utils import ProcessInputData
 from .train import train_model, predict
-from .model import scaden
+from .model import scaden, AutoEncoder
 
-def Deconvolution(necessary_data, real_bulk, sep='\t',
+def Deconvolution(necessary_data, real_bulk, sep='\t', variance_threshold=0.8,
                   datatype='counts', genelenfile=None, d_prior=None,
                   mode='overall', adaptive=True,
-                  save_model_name=None,
+                  save_model_name=None, sparse=True,
                   batch_size=128, epochs=128):
     """
     :param necessary_data: for single-cell data, txt file and dataframe are supported. for simulated data, file location
                            and the h5ad variable are supported. for a trained model, model location(saved with pth) and
                            the model are supported.
     :param real_bulk: an expression file path, index is sample, columns is gene name
+    :param variance_threshold: value from 0 to 1. Filter out genes with variance low than this rank.
     :param sep: used to read bulk data, depends on the format
-    :param bulkDataType: FPKM or TPM, if type is RPKM, please just use FPKM
+    :param datatype: FPKM or TPM, if bulk RNA-seq normalization type is RPKM, please just use FPKM.
     :param genelenfile: specify the location of gene length file for transforming counts data to TPM or FPKM
                         this file should in txt format and
                         contain three columns: [Gene name,Transcript start (bp),Transcript end (bp)]
@@ -43,7 +44,7 @@ def Deconvolution(necessary_data, real_bulk, sep='\t',
     if type(necessary_data) is str:
         postfix = necessary_data.split('.')[-1]
         if postfix == 'txt':
-            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000, d_prior=d_prior)
+            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000, d_prior=d_prior, sparse=sparse)
 
         elif postfix == 'h5ad':
             simudata = anndata.read_h5ad(necessary_data)
@@ -54,18 +55,19 @@ def Deconvolution(necessary_data, real_bulk, sep='\t',
             raise Exception('Please give the correct input')
     else:
         if type(necessary_data) is pd.DataFrame:
-            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000, d_prior=d_prior)
+            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000, d_prior=d_prior, sparse=sparse)
 
         elif type(necessary_data) is anndata.AnnData:
             simudata = necessary_data
 
-        elif type(necessary_data) is TAPE.model.AutoEncoder:
+        elif type(necessary_data) is AutoEncoder:
             raise Exception('Do not accept a model as input')
         else:
             raise Exception('Please give the correct input')
 
     train_x, train_y, test_x, genename, celltypes, samplename = \
-        ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
+        ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile,
+                         variance_threshold=variance_threshold)
     print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
     if save_model_name is not None:
         model = train_model(train_x, train_y, save_model_name, batch_size=batch_size, epochs=epochs)
@@ -93,12 +95,12 @@ def Deconvolution(necessary_data, real_bulk, sep='\t',
         Sigm = None
         return Sigm, Pred
 
-def ScadenDeconvolution(necessary_data, real_bulk, sep='\t',
+def ScadenDeconvolution(necessary_data, real_bulk, sep='\t', sparse=True,
                         batch_size=128, epochs=128):
     if type(necessary_data) is str:
         postfix = necessary_data.split('.')[-1]
         if postfix == 'txt':
-            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000)
+            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000, sparse=sparse)
 
         elif postfix == 'h5ad':
             simudata = anndata.read_h5ad(necessary_data)
@@ -109,18 +111,18 @@ def ScadenDeconvolution(necessary_data, real_bulk, sep='\t',
             raise Exception('Please give the correct input')
     else:
         if type(necessary_data) is pd.DataFrame:
-            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000)
+            simudata = generate_simulated_data(sc_data=necessary_data, samplenum=5000, sparse=sparse)
 
         elif type(necessary_data) is anndata.AnnData:
             simudata = necessary_data
 
-        elif type(necessary_data) is TAPE.model.AutoEncoder:
+        elif type(necessary_data) is AutoEncoder:
             raise Exception('Do not accept a model as input')
         else:
             raise Exception('Please give the correct input')
 
     train_x, train_y, test_x, genename, celltypes, samplename = \
-        ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile)
+        ProcessInputData(simudata, real_bulk, sep=sep, datatype='counts')
     print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
     pred = test_scaden(train_x,train_y,test_x,batch_size=batch_size,epochs=epochs)
     pred = pd.DataFrame(pred, columns=celltypes, index=samplename)
