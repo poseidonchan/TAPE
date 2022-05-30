@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2350c592-b677-41d4-a485-f93ce389bdb9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/ROSMAPclinical_analysis-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/ROSMAPclinical_analysis-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/covid_islet_analysis-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/.ipynb_checkpoints/covid_islet_analysis-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/COVIDisletpred_tape.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/COVIDisletpred_tape.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/COVIDpbmcpred_csx.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/GEPchange.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/HIV_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/HIV_analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/ROSMAPclinical_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/ROSMAPclinical_analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/covid_islet_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/covid_islet_analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/covid_pbmc_plot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Experiments/Figures/covid_pbmc_plot.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/rab11fip5_hiv_csx.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/rab11fip5_hiv_tape.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/Figures/time_comparison.eps" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TAPE/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/TAPE/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +45,7 @@
       <workItem from="1652616185031" duration="369000" />
       <workItem from="1653929852882" duration="117000" />
       <workItem from="1653930061051" duration="44000" />
+      <workItem from="1653930361827" duration="36000" />
     </task>
     <servers />
   </component>
