@@ -99,8 +99,12 @@ def ProcessInputData(train_data, test_data, sep=None, datatype='TPM', variance_t
     train_x = np.log(train_x + 1)
     test_x = np.log(test_x + 1)
 
-    sns.histplot(data=np.mean(train_x, axis=0), kde=True, color='b')
-    sns.histplot(data=np.mean(test_x, axis=0), kde=True, color='g')
+    colors = sns.color_palette('RdYlBu', 10)
+    fig = plt.figure()
+    sns.histplot(data=np.mean(train_x, axis=0), kde=True, color=colors[3],edgecolor=None)
+    sns.histplot(data=np.mean(test_x, axis=0), kde=True, color=colors[7],edgecolor=None)
+    plt.legend(title='datatype', labels=['trainingdata', 'testdata'])
+
     plt.show()
 
     mean_trainx = np.mean(train_x, axis=0)
@@ -118,8 +122,11 @@ def ProcessInputData(train_data, test_data, sep=None, datatype='TPM', variance_t
         ss = StandardScaler()
         ss_train_x = ss.fit_transform(train_x.T).T
         ss_test_x = ss.fit_transform(test_x.T).T
-        sns.histplot(data=np.mean(ss_train_x, axis=0), kde=True, color='b')
-        sns.histplot(data=np.mean(ss_test_x, axis=0), kde=True, color='g')
+        fig = plt.figure()
+        sns.histplot(data=np.mean(ss_train_x, axis=0), kde=True, color=colors[3],edgecolor=None)
+        sns.histplot(data=np.mean(ss_test_x, axis=0), kde=True, color=colors[7],edgecolor=None)
+        plt.legend(title='datatype', labels=['trainingdata', 'testdata'])
+
         plt.show()
 
         return ss_train_x, train_y.values, ss_test_x, genename, celltypes, samplename
@@ -128,8 +135,10 @@ def ProcessInputData(train_data, test_data, sep=None, datatype='TPM', variance_t
         mms = MinMaxScaler()
         mms_train_x = mms.fit_transform(train_x.T).T
         mms_test_x = mms.fit_transform(test_x.T).T
-        sns.histplot(data=np.mean(mms_train_x, axis=0), kde=True, color='b')
-        sns.histplot(data=np.mean(mms_test_x, axis=0), kde=True, color='g')
+        sns.histplot(data=np.mean(mms_train_x, axis=0), kde=True, color=colors[3],edgecolor=None)
+        sns.histplot(data=np.mean(mms_test_x, axis=0), kde=True, color=colors[7],edgecolor=None)
+        plt.legend(title='datatype', labels=['trainingdata', 'testdata'])
+
         plt.show()
 
         return mms_train_x, train_y.values, mms_test_x, genename, celltypes, samplename
