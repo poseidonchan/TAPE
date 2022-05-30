@@ -12,7 +12,7 @@ setup(
     platforms = 'any',
     install_requires = [
         'torch==1.8.0',
-        'numpy==1.19',
+        'numpy==1.21.0',
         'pandas==1.3.1',
         'matplotlib==3.4',
         'anndata==0.7.6',
