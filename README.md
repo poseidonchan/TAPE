@@ -20,6 +20,7 @@ If PyTorch is successfully installed, then TAPE could be installed from PyPI dir
 ```bash
 pip install scTAPE
 ```
+Usually, the installation time depends on your downloading speed.
 ## Usage
 
 Required Files:
@@ -60,6 +61,8 @@ The parameters in this function are the same as the parameters in the *Deconvolu
 
 ## Example
 An example is placed in the **Test** directory. Please run the example to get familiar with TAPE.
+
+Run the demo may takes 2 to 3 mins with GPU acceleration or 10 mins with CPU.
 
 ## Issues
 If you find any bugs or have problems when you are using scTAPE, feel free to raise issues.
