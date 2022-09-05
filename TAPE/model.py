@@ -6,7 +6,6 @@ from tqdm import tqdm
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
-
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 warnings.filterwarnings("ignore")
 
@@ -29,29 +28,31 @@ class AutoEncoder(nn.Module):
     def __init__(self, input_dim, output_dim):
         super().__init__()
         self.name = 'ae'
-        self.state = 'train'  # or 'test'
+        self.state = 'train' # or 'test'
         self.inputdim = input_dim
         self.outputdim = output_dim
         self.encoder = nn.Sequential(nn.Dropout(),
                                      nn.Linear(self.inputdim, 512),
                                      nn.CELU(),
-
+                                     
+                                     
                                      nn.Dropout(),
                                      nn.Linear(512, 256),
                                      nn.CELU(),
-
+                                     
+                                     
                                      nn.Dropout(),
                                      nn.Linear(256, 128),
                                      nn.CELU(),
-
+                                     
+                                     
                                      nn.Dropout(),
                                      nn.Linear(128, 64),
                                      nn.CELU(),
-
-                                     nn.Dropout(),
+                                     
                                      nn.Linear(64, output_dim),
-                                     nn.CELU()
                                      )
+        
 
         self.decoder = nn.Sequential(nn.Linear(self.outputdim, 64, bias=False),
                                      nn.Linear(64, 128, bias=False),
@@ -65,10 +66,10 @@ class AutoEncoder(nn.Module):
     def decode(self, z):
         return self.decoder(z)
 
-    def refraction(self, x):
+    def refraction(self,x):
         x_sum = torch.sum(x, dim=1, keepdim=True)
-        return x / x_sum
-
+        return x/x_sum
+    
     def sigmatrix(self):
         w0 = (self.decoder[0].weight.T)
         w1 = (self.decoder[1].weight.T)
@@ -89,7 +90,7 @@ class AutoEncoder(nn.Module):
         elif self.state == 'test':
             z = F.relu(z)
             z = self.refraction(z)
-
+            
         x_recon = torch.mm(z, sigmatrix)
         return x_recon, z, sigmatrix
 

@@ -1,12 +1,18 @@
 # TAPE: Tissue-AdaPtive autoEncoder for accurate deconvolution and gene expression analysis
 
-![scTAPE](https://img.shields.io/badge/scTAPE-v1.0.2-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![Downloads](https://static.pepy.tech/personalized-badge/sctape?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/sctape)
+![scTAPE](https://img.shields.io/badge/scTAPE-v1.0.3-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![Downloads](https://static.pepy.tech/personalized-badge/sctape?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/sctape)
 
 **This model is able to accurately deconvolve bulk RNA-seq data into cell fractions and predict cell-type-specific gene expression at cell-type level based on scRNA-seq data**.
 
 related article ***Deep autoencoder for interpretable tissue-adaptive deconvolution and cell-type-specific gene analysis*** is available on [*bioRxiv*](https://doi.org/10.1101/2021.10.26.465846)
 
+## Warning
+The data I uploaded to the tsinghua cloud has been removed since I left Tsinghua University😭. If you need these files, please contact me (poseidonchan@icloud.com).
+
+Currently, I am busy with moving to a new places. The version 1.0.3 is still not tested yet. If you want to reproduce the results in the manuscript, please find the notebooks in the Experiments folder and contact me (poseidonchan@icloud.com).
+
 ## Setup
+
 TAPE uses PyTorch as its Deep-learning framework, so the suitable version of PyTorch will accelerate the model training process. We recommend users to install PyTorch(>=1.8.0) with ***right*** compute platform (CUDA, CPU or ROCm) from its official [website](https://pytorch.org) in advance.
 
 For example, we used NVIDIA GPU RTX 3090, so we choose the CUDA version 11.1 and the command is:
