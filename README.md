@@ -7,9 +7,7 @@
 related article ***Deep autoencoder for interpretable tissue-adaptive deconvolution and cell-type-specific gene analysis*** is available on [*bioRxiv*](https://doi.org/10.1101/2021.10.26.465846)
 
 ## Warning
-The data I uploaded to the tsinghua cloud has been removed since I left Tsinghua University😭. If you need these files, please contact me (poseidonchan@icloud.com).
-
-Currently, I am busy with moving to a new places. The version 1.0.3 is still not tested yet. If you want to reproduce the results in the manuscript, please find the notebooks in the Experiments folder and contact me (poseidonchan@icloud.com).
+The data I uploaded to the tsinghua cloud has been removed since I left Tsinghua University. If you need these files, please contact me (poseidonchan@icloud.com).
 
 ## Setup
 
