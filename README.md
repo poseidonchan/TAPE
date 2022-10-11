@@ -49,10 +49,10 @@ parameters:
 1. datatype: use '**TPM**', '**FPKM**' or '**counts**'. Users can choose different normalization method based on your single-cell seq technique, if single-cell data is from 10X Genomics, users should use '**counts**' to maintain a resonable procedure. The explanation could be found from the [webpage](https://kb.10xgenomics.com/hc/en-us/articles/115003684783-Should-I-calculate-TPM-RPKM-or-FPKM-instead-of-counts-for-10x-Genomics-data-).
 2. mode: '**overall**' or '**high-resolution**'. If you need signature matrix for each sample, use 'high-resolution' mode.
 3. adaptive: **True** or **False**. If this is False, then it would not predict signature matrix, the return will be ***None***
-4. variance_threshold: Float number from 0 to 1, it means how many genes you want to keep according to variance from high to low.
+4. variance_threshold: Float number from 0 to 1, it means how many genes you want to keep (in proportion) according to variance from high to low.
 5. batch_size: **int**, related to training result. 32-128 are recommended. Smaller batch_size leads to more time consumption.
 6. epochs: **int**, related to training result. Typically, *5000-10000* iterations are enough for TAPE, the relation is $epochs=\frac{iteration \times batch\_size}{sampleing\_num}$
-7. seed: now, TAPE supports pinning the random seed to make results reproducible.
+7. seed: now, TAPE supports pinning the random seed to make results being reproducible.
 
 Since the original implementation of Scaden [[repository](https://github.com/KevinMenden/scaden)] [[paper](https://www.science.org/doi/10.1126/sciadv.aba2619)] is not easy for us to test, we implemented the PyTorch version of Scaden. If you want to use Scaden to deconvolve bulk RNA-seq data, you can use the following code:
 
@@ -61,8 +61,6 @@ from TAPE.deconvolution import ScadenDeconvolution
 Pred = ScadenDeconvolution(sc_ref, bulkdata, sep='\t',
                            batch_size=128, epochs=128)
 ```
-
-The parameters in this function are the same as the parameters in the *Deconvolution* function. 
 
 
 ## Example
