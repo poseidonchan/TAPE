@@ -1,22 +1,12 @@
-## Jupyter notebooks to generate figures
-### Figure 1
-These great illustrations are made by Yixuan!
+## Experiments & Reproducibility
 
-### Figure 2
-> a. [performance in heatmap](https://github.com/poseidonchan/TAPE/blob/main/Experiments/Figures/heat_map/heat%20map.ipynb)
-> b. [single cell map](https://github.com/poseidonchan/TAPE/blob/main/Experiments/GSE87544_mousebrain_chen.ipynb)
-> c. [scaden&TAPE](https://github.com/poseidonchan/TAPE/blob/main/Experiments/Figures/scaden%26TAPE.ipynb)
-> d. [Time comlexity](https://github.com/poseidonchan/TAPE/blob/main/Experiments/Figures/time_comparison.ipynb)
+### Figures
+Jupyter notebooks used to generate figures can be found in the Experimetns folder in the repository. If you need other files, pleas contact me.
 
-### Figure 3
-> a&b. [ROSMAP Neurons&Microglia](https://github.com/poseidonchan/TAPE/blob/main/Experiments/Figures/ROSMAPclinical_analysis.ipynb)
-> c. [COVID PBMC](https://github.com/poseidonchan/TAPE/blob/main/Experiments/Figures/covid_pbmc_plot.ipynb)
-> d. [COVID islet](https://github.com/poseidonchan/TAPE/blob/main/Experiments/Figures/lineplot.ipynb)
+### Reproducibility
+Codes and data to reproduce the main deconvolution results in figure 2,3 are in the [shared file](https://drive.google.com/file/d/18vfVZlTj0RDKf86W_QvYKeuIrk0fLjrd/view?usp=sharing).
 
-### Figure 4
-> a. [concordance](https://github.com/poseidonchan/TAPE/blob/main/Experiments/Figures/GEPanalysis.ipynb)
-> b, c &d. [overall analysis](https://github.com/poseidonchan/TAPE/blob/main/Experiments/Figures/ROSMAP_GEPanalysis.ipynb)
-> e. [high resolution analysis](https://github.com/poseidonchan/TAPE/blob/main/Experiments/Figures/HIV_analysis.ipynb)
+Codes and data to reproduce the DEG detection of HIV PBMC datasets could be find in the [shared file](https://drive.google.com/file/d/1X8ByjkdZug1VNS9OM_FtbcrAPcK06uvd/view?usp=sharing).
 
-### Figure 5
-more details could contact [Logan](yuelong.chen.btr@gmail.com)
+
+

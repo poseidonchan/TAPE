@@ -2,14 +2,14 @@ import anndata
 import pandas as pd
 from .simulation import generate_simulated_data
 from .utils import ProcessInputData
-from .train import train_model, predict
+from .train import train_model, predict, reproducibility
 from .model import scaden, AutoEncoder
 
 def Deconvolution(necessary_data, real_bulk, sep='\t', variance_threshold=0.8,
                   datatype='counts', genelenfile=None, d_prior=None,
                   mode='overall', adaptive=True,
                   save_model_name=None, sparse=True,
-                  batch_size=128, epochs=128):
+                  batch_size=128, epochs=128, seed=0):
     """
     :param necessary_data: for single-cell data, txt file and dataframe are supported. for simulated data, file location
                            and the h5ad variable are supported. for a trained model, model location(saved with pth) and
@@ -70,8 +70,10 @@ def Deconvolution(necessary_data, real_bulk, sep='\t', variance_threshold=0.8,
                          variance_threshold=variance_threshold)
     print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
     if save_model_name is not None:
+        reproducibility(seed)
         model = train_model(train_x, train_y, save_model_name, batch_size=batch_size, epochs=epochs)
     else:
+        reproducibility(seed)
         model = train_model(train_x, train_y, batch_size=batch_size, epochs=epochs)
     print('Notice that you are using parameters: mode=' + str(mode) + ' and adaptive=' + str(adaptive))
     if adaptive is True:

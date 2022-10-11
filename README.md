@@ -1,13 +1,13 @@
 # TAPE: Tissue-AdaPtive autoEncoder for accurate deconvolution and gene expression analysis
 
-![scTAPE](https://img.shields.io/badge/scTAPE-v1.0.3-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![Downloads](https://static.pepy.tech/personalized-badge/sctape?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/sctape)
+![scTAPE](https://img.shields.io/badge/scTAPE-v1.1.0-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![Downloads](https://static.pepy.tech/personalized-badge/sctape?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/sctape)
 
 **This model is able to accurately deconvolve bulk RNA-seq data into cell fractions and predict cell-type-specific gene expression at cell-type level based on scRNA-seq data**.
 
-related article ***Deep autoencoder for interpretable tissue-adaptive deconvolution and cell-type-specific gene analysis*** is available on [*bioRxiv*](https://doi.org/10.1101/2021.10.26.465846)
+related article ***Deep autoencoder for interpretable tissue-adaptive deconvolution and cell-type-specific gene analysis*** is accepted by *Nature Communications*
 
 ## Warning
-The data I uploaded to the tsinghua cloud has been removed since I left Tsinghua University. If you need these files, please contact me (poseidonchan@icloud.com).
+The data I uploaded to the tsinghua cloud is not stable and maybe removed in the future since I left Tsinghua University. If you need these files, please contact me (poseidonchan@icloud.com).
 
 ## Setup
 
@@ -40,17 +40,19 @@ from TAPE import Deconvolution
 SignatureMatrix, CellFractionPrediction = \
     Deconvolution(sc_ref, bulkdata, sep='\t',
                   datatype='counts', genelenfile='./GeneLength.txt',
-                  mode='overall', adaptive=True,
+                  mode='overall', adaptive=True, variance_threshold=0.98,
                   save_model_name=None,
-                  batch_size=128, epochs=128)
+                  batch_size=128, epochs=128, seed=1)
 ```
 parameters:
 
 1. datatype: use '**TPM**', '**FPKM**' or '**counts**'. Users can choose different normalization method based on your single-cell seq technique, if single-cell data is from 10X Genomics, users should use '**counts**' to maintain a resonable procedure. The explanation could be found from the [webpage](https://kb.10xgenomics.com/hc/en-us/articles/115003684783-Should-I-calculate-TPM-RPKM-or-FPKM-instead-of-counts-for-10x-Genomics-data-).
 2. mode: '**overall**' or '**high-resolution**'. If you need signature matrix for each sample, use 'high-resolution' mode.
 3. adaptive: **True** or **False**. If this is False, then it would not predict signature matrix, the return will be ***None***
-4. batch_size: **int**, related to training result. 32-128 are recommended. Smaller batch_size leads to more time consumption.
-5. epochs: **int**, related to training result. Typically, *5000-10000* iterations are enough for TAPE, the relation is $epochs=\frac{iteration \times batch\_size}{sampleing\_num}$
+4. variance_threshold: Float number from 0 to 1, it means how many genes you want to keep according to variance from high to low.
+5. batch_size: **int**, related to training result. 32-128 are recommended. Smaller batch_size leads to more time consumption.
+6. epochs: **int**, related to training result. Typically, *5000-10000* iterations are enough for TAPE, the relation is $epochs=\frac{iteration \times batch\_size}{sampleing\_num}$
+7. seed: now, TAPE supports pinning the random seed to make results reproducible.
 
 Since the original implementation of Scaden [[repository](https://github.com/KevinMenden/scaden)] [[paper](https://www.science.org/doi/10.1126/sciadv.aba2619)] is not easy for us to test, we implemented the PyTorch version of Scaden. If you want to use Scaden to deconvolve bulk RNA-seq data, you can use the following code:
 
@@ -71,10 +73,6 @@ Run the demo may takes 2 to 3 mins with GPU acceleration or 10 mins with CPU.
 ## Issues
 If you find any bugs or have problems when you are using scTAPE, feel free to raise issues.
 
-## Citation
-If you feel TAPE is useful and want to cite TAPE, please use the following format:
-[Bib TeX](https://cloud.tsinghua.edu.cn/f/6351d49841934fa79bc5/?dl=1)
-[EndNote](https://cloud.tsinghua.edu.cn/f/88780d85281c40c0848f/?dl=1)
 
 ## Acknowledgement
 Special thanks to [*Mengyue Sun*](https://github.com/sunmy2019), for his help to accelerate the sampling process (in the simulation.py).

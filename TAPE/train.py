@@ -25,8 +25,10 @@ def training_stage(model, train_loader, optimizer, epochs=128):
     model.state = 'train'
     loss = []
     recon_loss = []
+    
     for i in tqdm(range(epochs)):
         for k, (data, label) in enumerate(train_loader):
+            # reproducibility(seed=0)
             optimizer.zero_grad()
             x_recon, cell_prop, sigm = model(data)
             batch_loss = F.l1_loss(cell_prop, label) + F.l1_loss(x_recon, data) 
@@ -59,7 +61,7 @@ def adaptive_stage(model, data, optimizerD, optimizerE, step=10, max_iter=5):
             loss.append(F.l1_loss(x_recon, data).cpu().detach().numpy())
 
         for i in range(step):
-            reproducibility(seed=9)
+            reproducibility(seed=0)
             optimizerE.zero_grad()
             x_recon, pred, _ = model(data)
             batch_loss = F.l1_loss(ori_pred, pred)+F.l1_loss(x_recon, data)
@@ -78,7 +80,7 @@ def train_model(train_x, train_y,
     
     train_loader = DataLoader(simdatset(train_x, train_y), batch_size=batch_size, shuffle=True)
     model = AutoEncoder(train_x.shape[1], train_y.shape[1]).to(device)
-    reproducibility(seed=0)
+    # reproducibility(seed=0)
     optimizer = Adam(model.parameters(), lr=1e-4)
     print('Start training')
     model, loss, reconloss = training_stage(model, train_loader, optimizer, epochs=epochs)
@@ -114,7 +116,7 @@ def predict(test_x, genename, celltypes, samplename,
                 encoder_parameters = [{'params': [p for n, p in model.named_parameters() if 'encoder' in n]}]
                 optimizerD = torch.optim.Adam(decoder_parameters, lr=1e-4)
                 optimizerE = torch.optim.Adam(encoder_parameters, lr=1e-4)
-                test_sigm, loss, test_pred = adaptive_stage(model, x, optimizerD, optimizerE, step=300, max_iter=6)
+                test_sigm, loss, test_pred = adaptive_stage(model, x, optimizerD, optimizerE, step=300, max_iter=3)
                 TestSigmList[i, :, :] = test_sigm
                 TestPred[i,:] = test_pred
             TestPred = pd.DataFrame(TestPred,columns=celltypes,index=samplename)
@@ -159,6 +161,7 @@ def predict(test_x, genename, celltypes, samplename,
         pred = pd.DataFrame(pred, columns=celltypes, index=samplename)
         print('Prediction is done')
         return pred
+
 
 
 

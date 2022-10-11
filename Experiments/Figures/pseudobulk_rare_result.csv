@@ -1,0 +1,307 @@
+,CellType,Method,DataType,Tissue,CCC,L1error,abundant
+0,skeletal muscle satellite cell,DWLS,umi2counts,Limb_Muscle,0.20986833343894493,0.011399586239933163,rare
+1,mesenchymal stem cell,DWLS,umi2counts,Limb_Muscle,0.9736375027521955,0.03967475195916457,normal
+2,endothelial cell,DWLS,umi2counts,Limb_Muscle,0.10110758373447945,0.03794986785674846,rare
+3,B cell,DWLS,umi2counts,Limb_Muscle,0.978186765683159,0.031466259654188165,normal
+4,macrophage,DWLS,umi2counts,Limb_Muscle,0.9718147353970602,0.03498825681261426,normal
+5,T cell,DWLS,umi2counts,Limb_Muscle,0.892410574932403,0.0627553668988799,normal
+6,skeletal muscle satellite cell,DWLS,counts2umi,Limb_Muscle,0.0033014296072036223,0.19467506085741962,rare
+7,mesenchymal stem cell,DWLS,counts2umi,Limb_Muscle,0.8599201813861705,0.07167195639168245,normal
+8,endothelial cell,DWLS,counts2umi,Limb_Muscle,0.26066605115640157,0.013927123767100981,rare
+9,B cell,DWLS,counts2umi,Limb_Muscle,0.9078248904894217,0.05618664255196801,normal
+10,macrophage,DWLS,counts2umi,Limb_Muscle,0.8920952182223566,0.06554632414434096,normal
+11,T cell,DWLS,counts2umi,Limb_Muscle,0.9239889221312471,0.04729136147245077,normal
+12,lung endothelial cell,DWLS,umi2counts,Lung,0.875181064595168,0.0574695693588439,normal
+13,stromal cell,DWLS,umi2counts,Lung,0.910362979189639,0.04825059768219881,normal
+14,classical monocyte,DWLS,umi2counts,Lung,0.8970906361418926,0.04971128811572756,normal
+15,myeloid cell,DWLS,umi2counts,Lung,0.7247078267069289,0.06576163987170941,normal
+16,B cell,DWLS,umi2counts,Lung,0.9599706338300088,0.02681312947875704,normal
+17,T cell,DWLS,umi2counts,Lung,0.10941767369701415,0.026050288377692896,rare
+18,natural killer cell,DWLS,umi2counts,Lung,0.3666667561077125,0.014891106426851083,normal
+19,leukocyte,DWLS,umi2counts,Lung,0.7954446411804502,0.08704175324192058,normal
+20,ciliated columnar cell of tracheobronchial tree,DWLS,umi2counts,Lung,0.022205277512837754,0.013812639558289451,rare
+21,lung endothelial cell,DWLS,counts2umi,Lung,0.8040296433362799,0.05868450194620131,normal
+22,stromal cell,DWLS,counts2umi,Lung,0.42208845483215474,0.10064993214110865,normal
+23,classical monocyte,DWLS,counts2umi,Lung,0.4256890475460937,0.1774143742808783,normal
+24,myeloid cell,DWLS,counts2umi,Lung,0.5634438953491322,0.10252680901559395,normal
+25,B cell,DWLS,counts2umi,Lung,0.7841572353768973,0.1083668931508885,normal
+26,T cell,DWLS,counts2umi,Lung,0.00969002795790886,0.04081310779144856,rare
+27,natural killer cell,DWLS,counts2umi,Lung,0.34851194891409587,0.008955278555345433,normal
+28,leukocyte,DWLS,counts2umi,Lung,0.7824486429743425,0.07197022878814606,normal
+29,ciliated columnar cell of tracheobronchial tree,DWLS,counts2umi,Lung,0.7929677453620221,0.004160551615319215,rare
+30,hematopoietic precursor cell,DWLS,umi2counts,Marrow,0.08680655920879368,0.012184330040219585,rare
+31,granulocyte,DWLS,umi2counts,Marrow,0.9609086776839634,0.029722025063764885,normal
+32,immature B cell,DWLS,umi2counts,Marrow,0.7239437691519471,0.1248888850277473,normal
+33,monocyte,DWLS,umi2counts,Marrow,0.21304099892999973,0.016000590998310495,rare
+34,macrophage,DWLS,umi2counts,Marrow,0.9626307487781697,0.029205966988072603,normal
+35,basophil,DWLS,umi2counts,Marrow,0.9046330257882294,0.05175637864213333,normal
+36,hematopoietic precursor cell,DWLS,counts2umi,Marrow,0.004497106555902201,0.09873286809680788,rare
+37,granulocyte,DWLS,counts2umi,Marrow,0.18326895986775843,0.31945020654515954,normal
+38,immature B cell,DWLS,counts2umi,Marrow,0.4091986796355333,0.13975527454168096,normal
+39,monocyte,DWLS,counts2umi,Marrow,0.031298592728753204,0.02565551306733146,rare
+40,macrophage,DWLS,counts2umi,Marrow,0.5044409161526051,0.11187981758416671,normal
+41,basophil,DWLS,counts2umi,Marrow,0.3463335391964265,0.11200329276699625,normal
+42,skeletal muscle satellite cell,CIBERSORTx,counts2umi,Limb_Muscle,0.00017125712426621344,0.34350993072041086,rare
+43,mesenchymal stem cell,CIBERSORTx,counts2umi,Limb_Muscle,0.7928481587954801,0.0789087503885278,normal
+44,endothelial cell,CIBERSORTx,counts2umi,Limb_Muscle,0.013376954396642016,0.10116814691376122,rare
+45,B cell,CIBERSORTx,counts2umi,Limb_Muscle,0.24921159871105988,0.1662581155070458,normal
+46,macrophage,CIBERSORTx,counts2umi,Limb_Muscle,0.4186095824274919,0.14612749314254006,normal
+47,T cell,CIBERSORTx,counts2umi,Limb_Muscle,0.4285769988316785,0.1479268913642616,normal
+48,skeletal muscle satellite cell,CIBERSORTx,umi2counts,Limb_Muscle,0.07477874296579447,0.03454945645345927,rare
+49,mesenchymal stem cell,CIBERSORTx,umi2counts,Limb_Muscle,0.6771923420336917,0.1832970031308506,normal
+50,endothelial cell,CIBERSORTx,umi2counts,Limb_Muscle,0.01039752202664434,0.20256880238235492,rare
+51,B cell,CIBERSORTx,umi2counts,Limb_Muscle,0.41405003565250276,0.17527201031288428,normal
+52,macrophage,CIBERSORTx,umi2counts,Limb_Muscle,0.6432813044335948,0.11230225990050516,normal
+53,T cell,CIBERSORTx,umi2counts,Limb_Muscle,0.38644740052333165,0.1507546973273319,normal
+54,lung endothelial cell,CIBERSORTx,counts2umi,Lung,0.5810755531624389,0.1609167458405383,normal
+55,stromal cell,CIBERSORTx,counts2umi,Lung,0.6681869204437147,0.11822961532204687,normal
+56,classical monocyte,CIBERSORTx,counts2umi,Lung,0.2951527114006952,0.09301086736606377,normal
+57,myeloid cell,CIBERSORTx,counts2umi,Lung,0.5985905616251247,0.06361772932906193,normal
+58,B cell,CIBERSORTx,counts2umi,Lung,0.4938793515314935,0.11338080966680181,normal
+59,T cell,CIBERSORTx,counts2umi,Lung,0.02839598456660946,0.024689450046535107,rare
+60,natural killer cell,CIBERSORTx,counts2umi,Lung,0.10963712893222331,0.03465044422516263,normal
+61,leukocyte,CIBERSORTx,counts2umi,Lung,0.4476331361985399,0.07927471769299523,normal
+62,ciliated columnar cell of tracheobronchial tree,CIBERSORTx,counts2umi,Lung,0.26654667167249274,0.00870989100675206,rare
+63,lung endothelial cell,CIBERSORTx,umi2counts,Lung,0.9574819609894651,0.0291834237237858,normal
+64,stromal cell,CIBERSORTx,umi2counts,Lung,0.5679231728711203,0.16012397224845182,normal
+65,classical monocyte,CIBERSORTx,umi2counts,Lung,0.14966820249126458,0.1509129747694858,normal
+66,myeloid cell,CIBERSORTx,umi2counts,Lung,0.5265634712352982,0.07268483655692622,normal
+67,B cell,CIBERSORTx,umi2counts,Lung,0.06644705450418394,0.12788856773593976,normal
+68,T cell,CIBERSORTx,umi2counts,Lung,0.0069118842971001146,0.0878985552239902,rare
+69,natural killer cell,CIBERSORTx,umi2counts,Lung,0.008629595737295345,0.13356278933746696,normal
+70,leukocyte,CIBERSORTx,umi2counts,Lung,0.5785982783603619,0.07751722826312973,normal
+71,ciliated columnar cell of tracheobronchial tree,CIBERSORTx,umi2counts,Lung,0.30939103590399886,0.014314403797854145,rare
+72,hematopoietic precursor cell,CIBERSORTx,counts2umi,Marrow,0.013746026748702574,0.1237969819365989,rare
+73,granulocyte,CIBERSORTx,counts2umi,Marrow,0.48584383798116065,0.1878916082621789,normal
+74,immature B cell,CIBERSORTx,counts2umi,Marrow,0.5522221270835355,0.09384715843444638,normal
+75,late pro-B cell,CIBERSORTx,counts2umi,Marrow,0.8987554341021313,0.04369920494040245,normal
+76,monocyte,CIBERSORTx,counts2umi,Marrow,0.12724358232653374,0.02724131505547857,rare
+77,macrophage,CIBERSORTx,counts2umi,Marrow,0.591736788977285,0.09646430160656706,normal
+78,basophil,CIBERSORTx,counts2umi,Marrow,0.10818313653480581,0.15152161741571632,normal
+79,hematopoietic precursor cell,CIBERSORTx,umi2counts,Marrow,0.006717656842952333,0.1190690550572035,rare
+80,granulocyte,CIBERSORTx,umi2counts,Marrow,0.6595229095671451,0.07524150266907274,normal
+81,immature B cell,CIBERSORTx,umi2counts,Marrow,0.0653744675356554,0.1803102827986879,normal
+82,late pro-B cell,CIBERSORTx,umi2counts,Marrow,0.8260825735053972,0.0736619864367138,normal
+83,monocyte,CIBERSORTx,umi2counts,Marrow,0.0022366488582758757,0.24617812745555168,rare
+84,macrophage,CIBERSORTx,umi2counts,Marrow,0.8332359974841957,0.060493311206548175,normal
+85,basophil,CIBERSORTx,umi2counts,Marrow,0.2830737309611907,0.16531183809773173,normal
+86,mesenchymal stem cell,Scaden,counts2umi,Limb_Muscle,0.5976401706998938,0.10240715073076295,normal
+87,skeletal muscle satellite cell,Scaden,counts2umi,Limb_Muscle,0.008383700762434318,0.0788344138142345,rare
+88,T cell,Scaden,counts2umi,Limb_Muscle,0.5515606054205789,0.09703507274064627,normal
+89,macrophage,Scaden,counts2umi,Limb_Muscle,0.6374508106927168,0.10208577211664029,normal
+90,B cell,Scaden,counts2umi,Limb_Muscle,0.5464776572491933,0.10250276852332726,normal
+91,endothelial cell,Scaden,counts2umi,Limb_Muscle,0.013106564374480103,0.0851645600760418,rare
+92,mesenchymal stem cell,Scaden,umi2counts,Limb_Muscle,0.7653590631689795,0.13772202306188785,normal
+93,skeletal muscle satellite cell,Scaden,umi2counts,Limb_Muscle,0.18820664307770116,0.02707422518671303,rare
+94,T cell,Scaden,umi2counts,Limb_Muscle,0.7426992903585786,0.0944644948405245,normal
+95,macrophage,Scaden,umi2counts,Limb_Muscle,0.550109554428985,0.10881717642890014,normal
+96,B cell,Scaden,umi2counts,Limb_Muscle,0.48865693297102913,0.1464206331902701,normal
+97,endothelial cell,Scaden,umi2counts,Limb_Muscle,0.2412234676551444,0.023845233104326707,rare
+98,myeloid cell,Scaden,counts2umi,Lung,0.39836191133426324,0.07388670342814495,normal
+99,T cell,Scaden,counts2umi,Lung,0.019588896117340056,0.05494780797512984,rare
+100,classical monocyte,Scaden,counts2umi,Lung,0.516489401903835,0.08063766818528487,normal
+101,leukocyte,Scaden,counts2umi,Lung,0.47476183440859404,0.0789331301198035,normal
+102,natural killer cell,Scaden,counts2umi,Lung,0.007155222455008888,0.08446535179964222,normal
+103,ciliated columnar cell of tracheobronchial tree,Scaden,counts2umi,Lung,0.08265081723295674,0.03718605314347997,rare
+104,B cell,Scaden,counts2umi,Lung,0.3613990652947562,0.11165164597776829,normal
+105,stromal cell,Scaden,counts2umi,Lung,0.38872434476135914,0.08308492527231531,normal
+106,lung endothelial cell,Scaden,counts2umi,Lung,0.7150791313915935,0.05856238785157112,normal
+107,myeloid cell,Scaden,umi2counts,Lung,0.2469809934703016,0.08761068530759779,normal
+108,T cell,Scaden,umi2counts,Lung,0.0379411992170571,0.08288567390809222,rare
+109,classical monocyte,Scaden,umi2counts,Lung,0.6335862778877664,0.07746868538981623,normal
+110,leukocyte,Scaden,umi2counts,Lung,0.2397956463996429,0.10976508377684523,normal
+111,natural killer cell,Scaden,umi2counts,Lung,0.3267757313204184,0.009983717019983612,normal
+112,ciliated columnar cell of tracheobronchial tree,Scaden,umi2counts,Lung,0.2134952290872367,0.01189529157764226,rare
+113,B cell,Scaden,umi2counts,Lung,0.1659022977067899,0.11335581953297691,normal
+114,stromal cell,Scaden,umi2counts,Lung,0.4772133032723363,0.18911706736715572,normal
+115,lung endothelial cell,Scaden,umi2counts,Lung,0.8014595294372596,0.055941429430524804,normal
+116,immature B cell,Scaden,counts2umi,Marrow,0.6176601289912481,0.08494380753529338,normal
+117,granulocyte,Scaden,counts2umi,Marrow,0.755670337703556,0.07801339635392102,normal
+118,late pro-B cell,Scaden,counts2umi,Marrow,0.7920491438865337,0.056669937759210705,normal
+119,macrophage,Scaden,counts2umi,Marrow,0.6878965674044227,0.07325163142054103,normal
+120,monocyte,Scaden,counts2umi,Marrow,0.017404975317354222,0.07622088040124025,rare
+121,hematopoietic precursor cell,Scaden,counts2umi,Marrow,0.06060204390720943,0.03260670560009894,rare
+122,basophil,Scaden,counts2umi,Marrow,0.5503555082823719,0.07160891903323367,normal
+123,immature B cell,Scaden,umi2counts,Marrow,0.210316092662602,0.13243636272954107,normal
+124,granulocyte,Scaden,umi2counts,Marrow,0.6854403900624264,0.07988546004452166,normal
+125,late pro-B cell,Scaden,umi2counts,Marrow,0.7445752204938583,0.06654962365633893,normal
+126,macrophage,Scaden,umi2counts,Marrow,0.893697607333696,0.05227402886053992,normal
+127,monocyte,Scaden,umi2counts,Marrow,0.11817941552761782,0.032676596469725594,rare
+128,hematopoietic precursor cell,Scaden,umi2counts,Marrow,0.0034713483688107827,0.27068933491142005,rare
+129,basophil,Scaden,umi2counts,Marrow,0.3435126768649243,0.13476901405650515,normal
+130,skeletal muscle satellite cell,MuSiC,counts2umi,Limb_Muscle,0.028600676190964732,0.014701482144221218,rare
+131,mesenchymal stem cell,MuSiC,counts2umi,Limb_Muscle,0.7761861893289466,0.08656730320208654,normal
+132,endothelial cell,MuSiC,counts2umi,Limb_Muscle,0.2681871630657501,0.015509099398325206,rare
+133,B cell,MuSiC,counts2umi,Limb_Muscle,0.36728657037755424,0.2368313216200278,normal
+134,macrophage,MuSiC,counts2umi,Limb_Muscle,0.5730152019820544,0.12293106365737184,normal
+135,T cell,MuSiC,counts2umi,Limb_Muscle,0.7986351815950237,0.07816059947383394,normal
+136,skeletal muscle satellite cell,MuSiC,umi2counts,Limb_Muscle,,0.013543938523286968,rare
+137,mesenchymal stem cell,MuSiC,umi2counts,Limb_Muscle,0.6815081273164351,0.19096208199310205,normal
+138,endothelial cell,MuSiC,umi2counts,Limb_Muscle,0.0070114698288021035,0.19139346985881087,rare
+139,B cell,MuSiC,umi2counts,Limb_Muscle,0.042982226165096005,0.23218032797606677,normal
+140,macrophage,MuSiC,umi2counts,Limb_Muscle,0.6107935169455005,0.15967770355138206,normal
+141,T cell,MuSiC,umi2counts,Limb_Muscle,0.032094325546645604,0.23038149076110995,normal
+142,lung endothelial cell,MuSiC,counts2umi,Lung,0.9618370103853626,0.030224815729847688,normal
+143,stromal cell,MuSiC,counts2umi,Lung,0.48814261803112474,0.08491784895592551,normal
+144,classical monocyte,MuSiC,counts2umi,Lung,0.7832054019769356,0.04864681344880885,normal
+145,myeloid cell,MuSiC,counts2umi,Lung,0.7357357778093793,0.09029560620752129,normal
+146,B cell,MuSiC,counts2umi,Lung,0.9044243438138526,0.05859716823377753,normal
+147,T cell,MuSiC,counts2umi,Lung,0.013994340989251564,0.056469980602509164,rare
+148,natural killer cell,MuSiC,counts2umi,Lung,0.6099727331512773,0.005945732295910516,normal
+149,leukocyte,MuSiC,counts2umi,Lung,0.5027694079324434,0.08766257851046148,normal
+150,ciliated columnar cell of tracheobronchial tree,MuSiC,counts2umi,Lung,0.6123981132444336,0.009545173638429032,rare
+151,lung endothelial cell,MuSiC,umi2counts,Lung,0.6927169301424592,0.13011834710714565,normal
+152,stromal cell,MuSiC,umi2counts,Lung,0.7845520042662749,0.08227595072894962,normal
+153,classical monocyte,MuSiC,umi2counts,Lung,0.6937571610548083,0.1254289377930199,normal
+154,myeloid cell,MuSiC,umi2counts,Lung,0.49719407395213444,0.10730265605587652,normal
+155,B cell,MuSiC,umi2counts,Lung,,0.15212552396616802,normal
+156,T cell,MuSiC,umi2counts,Lung,,0.013704094861907776,rare
+157,natural killer cell,MuSiC,umi2counts,Lung,0.24598205354834926,0.012434094313035464,normal
+158,leukocyte,MuSiC,umi2counts,Lung,0.8986398466871659,0.04503558791700777,normal
+159,ciliated columnar cell of tracheobronchial tree,MuSiC,umi2counts,Lung,0.47595318738059994,0.008162235571956273,rare
+160,hematopoietic precursor cell,MuSiC,counts2umi,Marrow,0.01353070650605225,0.12339557484371673,rare
+161,granulocyte,MuSiC,counts2umi,Marrow,0.895353140330364,0.05706810789373926,normal
+162,immature B cell,MuSiC,counts2umi,Marrow,0.4789273038575038,0.1271337514160195,normal
+163,late pro-B cell,MuSiC,counts2umi,Marrow,0.908528661015185,0.050645596373544766,normal
+164,monocyte,MuSiC,counts2umi,Marrow,0.17357219836155788,0.013148359642464628,rare
+165,macrophage,MuSiC,counts2umi,Marrow,0.8943647752008567,0.047759755830763355,normal
+166,basophil,MuSiC,counts2umi,Marrow,0.7694234256462009,0.06388547325576677,normal
+167,hematopoietic precursor cell,MuSiC,umi2counts,Marrow,9.369418094561673e-05,0.014195573874465598,rare
+168,granulocyte,MuSiC,umi2counts,Marrow,0.8112932891655981,0.077386097285088,normal
+169,immature B cell,MuSiC,umi2counts,Marrow,0.043629236552437875,0.19453832879787591,normal
+170,late pro-B cell,MuSiC,umi2counts,Marrow,0.4838477797184246,0.11375416177175668,normal
+171,monocyte,MuSiC,umi2counts,Marrow,0.01664436936554499,0.09459959980653014,rare
+172,macrophage,MuSiC,umi2counts,Marrow,0.2692294025337797,0.2634092612412282,normal
+173,basophil,MuSiC,umi2counts,Marrow,0.8889537070192083,0.06438005559474722,normal
+174,B cell,TAPE,counts2umi,Limb_Muscle,0.6771016856740762,0.09019884102876473,normal
+175,T cell,TAPE,counts2umi,Limb_Muscle,0.7224038273575647,0.08748681156178037,normal
+176,endothelial cell,TAPE,counts2umi,Limb_Muscle,0.024953831839014763,0.06496484459604181,rare
+177,macrophage,TAPE,counts2umi,Limb_Muscle,0.6870282347011684,0.09085006147190292,normal
+178,mesenchymal stem cell,TAPE,counts2umi,Limb_Muscle,0.5446792127745246,0.12675059662073493,normal
+179,skeletal muscle satellite cell,TAPE,counts2umi,Limb_Muscle,0.0024194382566504243,0.09363434340423452,rare
+180,B cell,TAPE,umi2counts,Limb_Muscle,0.29157408679934327,0.1894499808629648,normal
+181,T cell,TAPE,umi2counts,Limb_Muscle,0.8097267856725934,0.07489246648531556,normal
+182,endothelial cell,TAPE,umi2counts,Limb_Muscle,0.05857332799682168,0.013312110343219665,rare
+183,macrophage,TAPE,umi2counts,Limb_Muscle,0.7826638404232358,0.099153437409252,normal
+184,mesenchymal stem cell,TAPE,umi2counts,Limb_Muscle,0.7678484871857149,0.14365115267930675,normal
+185,skeletal muscle satellite cell,TAPE,umi2counts,Limb_Muscle,0.029961781690278064,0.013275786410286969,rare
+186,B cell,TAPE,counts2umi,Lung,0.4166958509739628,0.1061303462677936,normal
+187,T cell,TAPE,counts2umi,Lung,0.013449906538165128,0.07649871929512982,rare
+188,ciliated columnar cell of tracheobronchial tree,TAPE,counts2umi,Lung,0.23876148775286893,0.029404948270479965,rare
+189,classical monocyte,TAPE,counts2umi,Lung,0.512214740738373,0.0855452411111076,normal
+190,leukocyte,TAPE,counts2umi,Lung,0.4463209459274877,0.07845558142051656,normal
+191,lung endothelial cell,TAPE,counts2umi,Lung,0.638282859341392,0.06088568784957883,normal
+192,myeloid cell,TAPE,counts2umi,Lung,0.5360105350425931,0.06365376532028032,normal
+193,natural killer cell,TAPE,counts2umi,Lung,0.005562434029078634,0.09073604268964221,normal
+194,stromal cell,TAPE,counts2umi,Lung,0.5305430194895864,0.07022818729959783,normal
+195,B cell,TAPE,umi2counts,Lung,0.270456734440177,0.1082912078858347,normal
+196,T cell,TAPE,umi2counts,Lung,0.145742799232205,0.011911364848781072,rare
+197,ciliated columnar cell of tracheobronchial tree,TAPE,umi2counts,Lung,0.03749201094165287,0.09274260817146063,rare
+198,classical monocyte,TAPE,umi2counts,Lung,0.41453464354008435,0.10458748641275192,normal
+199,leukocyte,TAPE,umi2counts,Lung,0.10986049676506054,0.1400210232824599,normal
+200,lung endothelial cell,TAPE,umi2counts,Lung,0.8534127068872653,0.0495689278835077,normal
+201,myeloid cell,TAPE,umi2counts,Lung,0.3397138641887397,0.1355223848134001,normal
+202,natural killer cell,TAPE,umi2counts,Lung,0.03915448100389753,0.014072783454682738,normal
+203,stromal cell,TAPE,umi2counts,Lung,0.5409016501269325,0.15411849488075213,normal
+204,basophil,TAPE,counts2umi,Marrow,0.5512320398950361,0.0717591394778431,normal
+205,granulocyte,TAPE,counts2umi,Marrow,0.8738219118567264,0.04339227558879413,normal
+206,hematopoietic precursor cell,TAPE,counts2umi,Marrow,0.04608616391544428,0.05221199671009895,rare
+207,immature B cell,TAPE,counts2umi,Marrow,0.5600665683403241,0.08967320385755143,normal
+208,late pro-B cell,TAPE,counts2umi,Marrow,0.8837645449520106,0.04512012989489993,normal
+209,macrophage,TAPE,counts2umi,Marrow,0.6471528749067336,0.07985561127623582,normal
+210,monocyte,TAPE,counts2umi,Marrow,0.015533542429671135,0.09373151293124024,rare
+211,basophil,TAPE,umi2counts,Marrow,0.6376670215953593,0.08786748230383502,normal
+212,granulocyte,TAPE,umi2counts,Marrow,0.8799307006200866,0.044204607161514795,normal
+213,hematopoietic precursor cell,TAPE,umi2counts,Marrow,0.04264142532813656,0.046188491191420065,rare
+214,immature B cell,TAPE,umi2counts,Marrow,0.6105652968031509,0.08181771715041862,normal
+215,late pro-B cell,TAPE,umi2counts,Marrow,0.7600271596378523,0.06645264731464459,normal
+216,macrophage,TAPE,umi2counts,Marrow,0.7956985999321634,0.0606761816348698,normal
+217,monocyte,TAPE,umi2counts,Marrow,0.07741611316235716,0.0476582037947256,rare
+218,B cell,RNAsieve,counts2umi,Limb_Muscle,-0.00037588734980622423,0.16133691003836367,normal
+219,T cell,RNAsieve,counts2umi,Limb_Muscle,-0.056404160581935765,0.16809842928340976,normal
+220,endothelial cell,RNAsieve,counts2umi,Limb_Muscle,0.002327231031612719,0.10457177257105915,rare
+221,macrophage,RNAsieve,counts2umi,Limb_Muscle,0.00810104333249131,0.18862652109520062,normal
+222,mesenchymal stem cell,RNAsieve,counts2umi,Limb_Muscle,-0.08457129397600593,0.20932594219522255,normal
+223,skeletal muscle satellite cell,RNAsieve,counts2umi,Limb_Muscle,-0.0019879381804356606,0.18042522536636463,rare
+224,B cell,RNAsieve,umi2counts,Limb_Muscle,0.012926342925721073,0.23201999450503333,normal
+225,T cell,RNAsieve,umi2counts,Limb_Muscle,-0.05666774166088341,0.18545779050367805,normal
+226,endothelial cell,RNAsieve,umi2counts,Limb_Muscle,-0.002961289048680854,0.1504485050649115,rare
+227,macrophage,RNAsieve,umi2counts,Limb_Muscle,-0.10145756352223305,0.17669605436648936,normal
+228,mesenchymal stem cell,RNAsieve,umi2counts,Limb_Muscle,0.08358292156707957,0.1998234586076371,normal
+229,skeletal muscle satellite cell,RNAsieve,umi2counts,Limb_Muscle,0.006514987643732272,0.07809187158721322,rare
+230,B cell,RNAsieve,counts2umi,Lung,0.025863936885345596,0.1531752630721215,normal
+231,T cell,RNAsieve,counts2umi,Lung,-0.012277586365788677,0.04216387141806904,rare
+232,ciliated columnar cell of tracheobronchial tree,RNAsieve,counts2umi,Lung,-0.0006977000266001007,0.19165617002674423,rare
+233,classical monocyte,RNAsieve,counts2umi,Lung,0.08309945882577353,0.09467054786762823,normal
+234,leukocyte,RNAsieve,counts2umi,Lung,0.019703964364462395,0.146316299714349,normal
+235,lung endothelial cell,RNAsieve,counts2umi,Lung,-0.07295883671858275,0.115338146445703,normal
+236,myeloid cell,RNAsieve,counts2umi,Lung,-0.17873828849488904,0.11364059809253328,normal
+237,natural killer cell,RNAsieve,counts2umi,Lung,0.007755707403310606,0.016966601677873085,normal
+238,stromal cell,RNAsieve,counts2umi,Lung,0.09336901216382312,0.15158857082599428,normal
+239,B cell,RNAsieve,umi2counts,Lung,0.013254483008104168,0.1500328452108496,normal
+240,T cell,RNAsieve,umi2counts,Lung,-0.08233600491768547,0.012302719337378643,rare
+241,ciliated columnar cell of tracheobronchial tree,RNAsieve,umi2counts,Lung,0.007512002938236426,0.064412113707208,rare
+242,classical monocyte,RNAsieve,umi2counts,Lung,-0.02963200397896467,0.1682394107678071,normal
+243,leukocyte,RNAsieve,umi2counts,Lung,0.007553053594804766,0.139273085918265,normal
+244,lung endothelial cell,RNAsieve,umi2counts,Lung,0.00033565844745803055,0.22787752301022515,normal
+245,myeloid cell,RNAsieve,umi2counts,Lung,-0.03504597949195949,0.1065825410848176,normal
+246,natural killer cell,RNAsieve,umi2counts,Lung,-0.005051107170817625,0.053590783932038644,normal
+247,stromal cell,RNAsieve,umi2counts,Lung,-0.02443187709970838,0.2434623791707916,normal
+248,basophil,RNAsieve,counts2umi,Marrow,-0.03380478610579887,0.11750322253390504,normal
+249,granulocyte,RNAsieve,counts2umi,Marrow,0.0617726269235257,0.12015233235047605,normal
+250,hematopoietic precursor cell,RNAsieve,counts2umi,Marrow,-0.00019942690272391883,0.30900787740612035,rare
+251,immature B cell,RNAsieve,counts2umi,Marrow,-0.011664392077105115,0.14229822132162032,normal
+252,late pro-B cell,RNAsieve,counts2umi,Marrow,-0.038123988470665705,0.12369801134468203,normal
+253,macrophage,RNAsieve,counts2umi,Marrow,-0.050729129715979364,0.1308544184713989,normal
+254,monocyte,RNAsieve,counts2umi,Marrow,-0.009686380415446685,0.07379913467222723,rare
+255,basophil,RNAsieve,umi2counts,Marrow,-0.030548734740445095,0.1951399377877818,normal
+256,granulocyte,RNAsieve,umi2counts,Marrow,0.08114946366461515,0.13347158387253164,normal
+257,hematopoietic precursor cell,RNAsieve,umi2counts,Marrow,0.00460762412638118,0.24459390481990487,rare
+258,immature B cell,RNAsieve,umi2counts,Marrow,0.01753076766237012,0.17736770079258438,normal
+259,late pro-B cell,RNAsieve,umi2counts,Marrow,-0.06398375949448101,0.130583018565753,normal
+260,macrophage,RNAsieve,umi2counts,Marrow,0.03587853278657603,0.11972182378496848,normal
+261,monocyte,RNAsieve,umi2counts,Marrow,0.001250582454566773,0.08483167380020287,rare
+262,B cell,Bisque,counts2umi,Limb_Muscle,0.3673702345183654,0.17141217180053567,normal
+263,T cell,Bisque,counts2umi,Limb_Muscle,0.09879098035057535,0.20573876301483085,normal
+264,endothelial cell,Bisque,counts2umi,Limb_Muscle,-0.008684663572000081,0.0904901658461522,rare
+265,macrophage,Bisque,counts2umi,Limb_Muscle,0.4466007306879527,0.1507767109868971,normal
+266,mesenchymal stem cell,Bisque,counts2umi,Limb_Muscle,0.6987723070383831,0.10897370991607057,normal
+267,skeletal muscle satellite cell,Bisque,counts2umi,Limb_Muscle,0.011306953597514803,0.0920541022892511,rare
+268,B cell,Bisque,umi2counts,Limb_Muscle,0.6941454472744921,0.12177734193830209,normal
+269,T cell,Bisque,umi2counts,Limb_Muscle,0.6081634572140582,0.1425151473956853,normal
+270,endothelial cell,Bisque,umi2counts,Limb_Muscle,0.013579765321329904,0.13231289802248047,rare
+271,macrophage,Bisque,umi2counts,Limb_Muscle,0.746394787733039,0.109840541405929,normal
+272,mesenchymal stem cell,Bisque,umi2counts,Limb_Muscle,0.8242205412048572,0.08867235954962069,normal
+273,skeletal muscle satellite cell,Bisque,umi2counts,Limb_Muscle,0.005224706539588554,0.13902348893194913,rare
+274,B cell,Bisque,counts2umi,Lung,0.49313144863541797,0.14114586042354277,normal
+275,T cell,Bisque,counts2umi,Lung,-0.0017463916334645284,0.151724307053125,rare
+276,ciliated columnar cell of tracheobronchial tree,Bisque,counts2umi,Lung,0.044651422855350335,0.08339202862534333,rare
+277,classical monocyte,Bisque,counts2umi,Lung,0.5725261991404632,0.11356679861497927,normal
+278,leukocyte,Bisque,counts2umi,Lung,0.6180032482177296,0.08954133460885987,normal
+279,lung endothelial cell,Bisque,counts2umi,Lung,-0.059972789794211626,0.1934873014909662,normal
+280,myeloid cell,Bisque,counts2umi,Lung,0.5491528083330559,0.09824830264730372,normal
+281,natural killer cell,Bisque,counts2umi,Lung,0.04766035387403459,0.05902798710963829,normal
+282,stromal cell,Bisque,counts2umi,Lung,0.6981060295985051,0.0805483510527551,normal
+283,B cell,Bisque,umi2counts,Lung,0.36355906307701785,0.11675945552092674,normal
+284,T cell,Bisque,umi2counts,Lung,0.00782180475155631,0.08968360231774428,rare
+285,ciliated columnar cell of tracheobronchial tree,Bisque,umi2counts,Lung,0.022896208660344593,0.08351447072970913,rare
+286,classical monocyte,Bisque,umi2counts,Lung,0.7734280679538919,0.07760161830133422,normal
+287,leukocyte,Bisque,umi2counts,Lung,0.6998407788369713,0.0895015988475838,normal
+288,lung endothelial cell,Bisque,umi2counts,Lung,0.3918013364880222,0.12276452753203708,normal
+289,myeloid cell,Bisque,umi2counts,Lung,0.4740202568525939,0.1136518076147175,normal
+290,natural killer cell,Bisque,umi2counts,Lung,0.028035744511760108,0.10475034545198379,normal
+291,stromal cell,Bisque,umi2counts,Lung,0.5683180076540948,0.08578803928462024,normal
+292,basophil,Bisque,counts2umi,Marrow,0.6720622535602269,0.10753413660233108,normal
+293,granulocyte,Bisque,counts2umi,Marrow,0.7717193149912617,0.09688739503467855,normal
+294,hematopoietic precursor cell,Bisque,counts2umi,Marrow,0.008764512652924474,0.09646131234856765,rare
+295,immature B cell,Bisque,counts2umi,Marrow,0.3962113519421126,0.14905667334366157,normal
+296,late pro-B cell,Bisque,counts2umi,Marrow,0.6609802106419029,0.11225930673438707,normal
+297,macrophage,Bisque,counts2umi,Marrow,0.5073343940820976,0.146301744181295,normal
+298,monocyte,Bisque,counts2umi,Marrow,0.01521184466147792,0.14076416370618622,rare
+299,basophil,Bisque,umi2counts,Marrow,0.8380063870835531,0.08867064392298218,normal
+300,granulocyte,Bisque,umi2counts,Marrow,0.7062417973490309,0.11338382047856822,normal
+301,hematopoietic precursor cell,Bisque,umi2counts,Marrow,0.012909716738077587,0.08861122208918239,rare
+302,immature B cell,Bisque,umi2counts,Marrow,0.4594686452049351,0.12501929132887127,normal
+303,late pro-B cell,Bisque,umi2counts,Marrow,0.7626294591236524,0.09292293213942193,normal
+304,macrophage,Bisque,umi2counts,Marrow,0.46156606482968315,0.12549065656632466,normal
+305,monocyte,Bisque,umi2counts,Marrow,0.009360971449697572,0.10816823690820968,rare
