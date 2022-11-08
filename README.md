@@ -1,6 +1,6 @@
 # TAPE: Tissue-AdaPtive autoEncoder for accurate deconvolution and gene expression analysis
 
-![scTAPE](https://img.shields.io/badge/scTAPE-v1.1.0-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![Downloads](https://static.pepy.tech/personalized-badge/sctape?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=downloads)](https://pepy.tech/project/sctape)[![DOI](https://zenodo.org/badge/386163911.svg)](https://zenodo.org/badge/latestdoi/386163911)
+![scTAPE](https://img.shields.io/badge/scTAPE-v1.1.0-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![DOI](https://zenodo.org/badge/386163911.svg)](https://zenodo.org/badge/latestdoi/386163911)
 
 **This model is able to accurately deconvolve bulk RNA-seq data into cell fractions and predict cell-type-specific gene expression at cell-type level based on scRNA-seq data**.
 
@@ -68,9 +68,26 @@ An example is placed in the **Test** directory. Please run the example to get fa
 
 Run the demo may takes 2 to 3 mins with GPU acceleration or 10 mins with CPU.
 
+
 ## Issues
 If you find any bugs or have problems when you are using scTAPE, feel free to raise issues.
 
+## Citation
+```bibtex
+@article{TAPE,
+   author = {Chen, Yanshuo and Wang, Yixuan and Chen, Yuelong and Cheng, Yuqi and Wei, Yumeng and Li, Yunxiang and Wang, Jiuming and Wei, Yingying and Chan, Ting-Fung and Li, Yu},
+   title = {Deep autoencoder for interpretable tissue-adaptive deconvolution and cell-type-specific gene analysis},
+   journal = {Nature Communications},
+   volume = {13},
+   number = {1},
+   pages = {6735},
+   ISSN = {2041-1723},
+   DOI = {10.1038/s41467-022-34550-9},
+   url = {https://doi.org/10.1038/s41467-022-34550-9},
+   year = {2022},
+   type = {Journal Article}
+}
+```
 
 ## Acknowledgement
 Special thanks to [*Mengyue Sun*](https://github.com/sunmy2019), for his help to accelerate the sampling process (in the simulation.py).
