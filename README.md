@@ -6,9 +6,6 @@
 
 related article ***Deep autoencoder for interpretable tissue-adaptive deconvolution and cell-type-specific gene analysis*** is accepted by *Nature Communications*
 
-## Warning
-The data I uploaded to the tsinghua cloud is not stable and maybe removed in the future since I left Tsinghua University. If you need these files, please contact me (poseidonchan@icloud.com).
-
 ## Setup
 
 TAPE uses PyTorch as its Deep-learning framework, so the suitable version of PyTorch will accelerate the model training process. We recommend users to install PyTorch(>=1.8.0) with ***right*** compute platform (CUDA, CPU or ROCm) from its official [website](https://pytorch.org) in advance.
