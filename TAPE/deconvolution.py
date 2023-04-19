@@ -6,6 +6,7 @@ from .train import train_model, predict, reproducibility
 from .model import scaden, AutoEncoder
 
 def Deconvolution(necessary_data, real_bulk, sep='\t', variance_threshold=0.8,
+                  scaler='mms',
                   datatype='counts', genelenfile=None, d_prior=None,
                   mode='overall', adaptive=True,
                   save_model_name=None, sparse=True,
@@ -16,6 +17,7 @@ def Deconvolution(necessary_data, real_bulk, sep='\t', variance_threshold=0.8,
                            the model are supported.
     :param real_bulk: an expression file path, index is sample, columns is gene name
     :param variance_threshold: value from 0 to 1. Filter out genes with variance low than this rank.
+    :param scaler: using MinMaxScaler ("mms") or StandardScaler ("ss") to process data.
     :param sep: used to read bulk data, depends on the format
     :param datatype: FPKM or TPM, if bulk RNA-seq normalization type is RPKM, please just use FPKM.
     :param genelenfile: specify the location of gene length file for transforming counts data to TPM or FPKM
@@ -67,7 +69,7 @@ def Deconvolution(necessary_data, real_bulk, sep='\t', variance_threshold=0.8,
 
     train_x, train_y, test_x, genename, celltypes, samplename = \
         ProcessInputData(simudata, real_bulk, sep=sep, datatype=datatype, genelenfile=genelenfile,
-                         variance_threshold=variance_threshold)
+                         variance_threshold=variance_threshold, scaler=scaler)
     print('training data shape is ', train_x.shape, '\ntest data shape is ', test_x.shape)
     if save_model_name is not None:
         reproducibility(seed)

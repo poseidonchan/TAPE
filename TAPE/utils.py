@@ -43,6 +43,7 @@ def counts2TPM(counts, genelen):
 
 
 def ProcessInputData(train_data, test_data, sep=None, datatype='TPM', variance_threshold=0.98,
+                     scaler="mms",
                      genelenfile=None):
     ### read train data
     print('Reading training data')
@@ -107,18 +108,8 @@ def ProcessInputData(train_data, test_data, sep=None, datatype='TPM', variance_t
 
     plt.show()
 
-    mean_trainx = np.mean(train_x, axis=0)
-    top_iv = pd.cut(mean_trainx,
-                    np.linspace(np.min(mean_trainx), np.max(mean_trainx), 100)).value_counts().sort_values()[-5:].index
-    train_mid = [i.mid for i in top_iv]
-    mean_testx = np.mean(test_x, axis=0)
-    top_iv = pd.cut(mean_testx, np.linspace(np.min(mean_testx), np.max(mean_testx), 100)).value_counts().sort_values()[
-             -5:].index
-    test_mid = [i.mid for i in top_iv]
-    if (np.max(train_mid) - np.min(train_mid) > 2 or np.max(test_mid) - np.min(test_mid) > 2):
-        print('The distribution of training data is probably a zero-inflated distribution.\n',
-              'We will use standard scale to deal with low variance noise.')
-
+    if scaler=='ss':
+        print("Using standard scaler...")
         ss = StandardScaler()
         ss_train_x = ss.fit_transform(train_x.T).T
         ss_test_x = ss.fit_transform(test_x.T).T
@@ -131,7 +122,8 @@ def ProcessInputData(train_data, test_data, sep=None, datatype='TPM', variance_t
 
         return ss_train_x, train_y.values, ss_test_x, genename, celltypes, samplename
 
-    else:
+    elif scaler == 'mms':
+        print("Using minmax scaler...")
         mms = MinMaxScaler()
         mms_train_x = mms.fit_transform(train_x.T).T
         mms_test_x = mms.fit_transform(test_x.T).T
