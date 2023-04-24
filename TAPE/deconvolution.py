@@ -5,7 +5,7 @@ from .utils import ProcessInputData
 from .train import train_model, predict, reproducibility
 from .model import scaden, AutoEncoder
 
-def Deconvolution(necessary_data, real_bulk, sep='\t', variance_threshold=0.8,
+def Deconvolution(necessary_data, real_bulk, sep='\t', variance_threshold=0.98,
                   scaler='mms',
                   datatype='counts', genelenfile=None, d_prior=None,
                   mode='overall', adaptive=True,

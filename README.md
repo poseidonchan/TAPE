@@ -1,6 +1,6 @@
 # TAPE: Tissue-AdaPtive autoEncoder for accurate deconvolution and gene expression analysis
 
-![scTAPE](https://img.shields.io/badge/scTAPE-v1.1.1-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![DOI](https://zenodo.org/badge/386163911.svg)](https://zenodo.org/badge/latestdoi/386163911)
+![scTAPE](https://img.shields.io/badge/scTAPE-v1.1.2-blue)![GPL](https://img.shields.io/github/license/poseidonchan/TAPE)[![DOI](https://zenodo.org/badge/386163911.svg)](https://zenodo.org/badge/latestdoi/386163911)
 
 **This model is able to accurately deconvolve bulk RNA-seq data into cell fractions and predict cell-type-specific gene expression at cell-type level based on scRNA-seq data**.
 
@@ -18,8 +18,10 @@ pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f htt
 
 If PyTorch is successfully installed, then TAPE could be installed from PyPI directly:
 
+***Update: I relax the dependece requirements to enable the compatibility with current packages***.
+
 ```bash
-pip install scTAPE
+pip install scTAPE==1.1.2
 ```
 Usually, the installation time depends on your downloading speed.
 ## Usage
@@ -35,7 +37,7 @@ Required Files:
 # basic example
 from TAPE import Deconvolution
 SignatureMatrix, CellFractionPrediction = \
-    Deconvolution(sc_ref, bulkdata, sep='\t',
+    Deconvolution(sc_ref, bulkdata, sep='\t', scaler='mms',
                   datatype='counts', genelenfile='./GeneLength.txt',
                   mode='overall', adaptive=True, variance_threshold=0.98,
                   save_model_name=None,
@@ -43,13 +45,14 @@ SignatureMatrix, CellFractionPrediction = \
 ```
 parameters:
 
-1. datatype: use '**TPM**', '**FPKM**' or '**counts**'. Users can choose different normalization method based on your single-cell seq technique, if single-cell data is from 10X Genomics, users should use '**counts**' to maintain a resonable procedure. The explanation could be found from the [webpage](https://kb.10xgenomics.com/hc/en-us/articles/115003684783-Should-I-calculate-TPM-RPKM-or-FPKM-instead-of-counts-for-10x-Genomics-data-).
-2. mode: '**overall**' or '**high-resolution**'. If you need signature matrix for each sample, use 'high-resolution' mode.
-3. adaptive: **True** or **False**. If this is False, then it would not predict signature matrix, the return will be ***None***
-4. variance_threshold: Float number from 0 to 1, it means how many genes you want to keep (in proportion) according to variance from high to low.
-5. batch_size: **int**, related to training result. 32-128 are recommended. Smaller batch_size leads to more time consumption.
-6. epochs: **int**, related to training result. Typically, *5000-10000* iterations are enough for TAPE, the relation is $epochs=\frac{iteration \times batch\_size}{sampleing\_num}$
-7. seed: now, TAPE supports pinning the random seed to make results being reproducible.
+1. scaler: use '**mms**' or '**ss**' scaler to preprocess datasets, 'mms' stands for min-max scaler, 'ss' stands for standard scaler. In the paper, all datasets were tested using 'mms'.
+2. datatype: use '**TPM**', '**FPKM**' or '**counts**'. Users can choose different normalization method based on your single-cell seq technique, if single-cell data is from 10X Genomics, users should use '**counts**' to maintain a resonable procedure. The explanation could be found from the [webpage](https://kb.10xgenomics.com/hc/en-us/articles/115003684783-Should-I-calculate-TPM-RPKM-or-FPKM-instead-of-counts-for-10x-Genomics-data-).
+3. mode: '**overall**' or '**high-resolution**'. If you need signature matrix for each sample, use 'high-resolution' mode.
+4. adaptive: **True** or **False**. If this is False, then it would not predict signature matrix, the return will be ***None***
+5. variance_threshold: Float number from 0 to 1, it means how many genes you want to keep (in proportion) according to variance from high to low.
+6. batch_size: **int**, related to training result. 32-128 are recommended. Smaller batch_size leads to more time consumption.
+7. epochs: **int**, related to training result. Typically, *5000-10000* iterations are enough for TAPE, the relation is $epochs=\frac{iteration \times batch\_size}{sampleing\_num}$
+8. seed: now, TAPE supports pinning the random seed to make results being reproducible.
 
 Since the original implementation of Scaden [[repository](https://github.com/KevinMenden/scaden)] [[paper](https://www.science.org/doi/10.1126/sciadv.aba2619)] is not easy for us to test, we implemented the PyTorch version of Scaden. If you want to use Scaden to deconvolve bulk RNA-seq data, you can use the following code:
 
