@@ -11,7 +11,8 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 # 1. GeneLength.txt
 def counts2FPKM(counts, genelen):
     genelen = pd.read_csv(genelen, sep=',')
-    genelen['TranscriptLength'] = genelen['Transcript end (bp)'] - genelen['Transcript start (bp)']
+    if 'TranscriptLength' not in genelen.columns:
+        genelen['TranscriptLength'] = genelen['Transcript end (bp)'] - genelen['Transcript start (bp)']    
     genelen = genelen[['Gene name', 'TranscriptLength']]
     genelen = genelen.groupby('Gene name').max()
     # intersection
